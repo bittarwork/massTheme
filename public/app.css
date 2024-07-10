@@ -3529,8 +3529,8 @@ input[type=radio].sr-only:checked ~ div.s-verify-back {
 .s-verify-back svg{height:18px;width:18px}
 [dir='ltr'] .s-verify-back{transform:scale(-1)}
 @font-face {
-  font-family: "montserratthin_italic";
-  src: url("montserrat-italic-variablefont_wght-webfont.woff2") format("woff2"), url("montserrat-italic-variablefont_wght-webfont.woff") format("woff");
+  font-family: "ara_etab_almonieeeregular";
+  src: url("araetabalmonieee-regular-webfont.woff2") format("woff2"), url("araetabalmonieee-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
