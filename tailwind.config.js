@@ -30,6 +30,7 @@ module.exports = {
         dark: "#1D1F1F",
         darker: "#0E0F0F",
         danger: "#AE0A0A",
+        beige: "#f5f5dc",
       },
       spacing: {
         3.75: "15px",
@@ -135,15 +136,4 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
   ],
-};
-
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        beige: "#f5f5dc",
-      },
-    },
-  },
-  plugins: [],
 };

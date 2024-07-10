@@ -90,8 +90,6 @@
 
 /* Sticky Header */
 .main-nav-container {
-  @apply bg-transparent fixed top-0 left-0 right-0 z-50 transition-colors duration-500;
-
   &.animated {
     .inner {
       transition: top 0.5s, transform 0.5s, -webkit-transform 0.5s, opacity 0.4s;
@@ -140,10 +138,6 @@
         top: 0;
       }
     }
-  }
-
-  &.scrolled {
-    @apply bg-beige bg-opacity-50;
   }
 }
 

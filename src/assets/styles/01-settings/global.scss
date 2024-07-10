@@ -1,4 +1,3 @@
-
 // Colors
 $main-color: var(--color-primary);
 $infinte-color: var(--infinte-color);
@@ -26,4 +25,8 @@ $main-text-color: var(--main-text-color);
 
   /* plugins */
   --mm-ocd-width: calc(100% - 51px);
+  --topnav-bg: #ffffff;
+  --topnav-gradient-from: #ffffff;
+  --topnav-gradient-to: #ffffff;
+  --topnav-text-color: #000000;
 }
