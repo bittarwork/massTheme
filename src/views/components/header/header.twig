@@ -12,8 +12,23 @@
 	<div id="mainnav" class="main-nav-container shadow-default">
 		<div class="inner bg-inherit">
 			<div class="container">
-				<div class="flex items-stretch justify-between relative">
-					<div class="flex items-center">
+				<div
+					class="flex items-stretch justify-between relative">
+					<!-- Icons on the left -->
+					<div class="flex items-center justify-start">
+						{% if user.type=='user' %}
+							<salla-user-menu avatar-only show-header></salla-user-menu>
+						{% else %}
+							<button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
+								<i class="header-btn__icon sicon-user-circle"></i>
+							</button>
+						{% endif %}
+						<salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
+							<i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
+						</salla-cart-summary>
+					</div>
+					<!-- Logo on the right -->
+					<div class="flex items-center justify-end">
 						<a class="lg:hidden mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
 							<i class="sicon-menu text-primary text-2xl"></i>
 						</a>
@@ -25,19 +40,10 @@
 								<h2 class="sr-only">{{ store.name }}</h2>
 							{% endif %}
 						</a>
-						<custom-main-menu></custom-main-menu>
 					</div>
-					<div class="flex items-center justify-end">
-						{% if user.type=='user' %}
-							<salla-user-menu avatar-only show-header></salla-user-menu>
-						{% else %}
-							<button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
-								<i class="header-btn__icon sicon-user-circle"></i>
-							</button>
-						{% endif %}
-						<salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
-							<i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
-						</salla-cart-summary>
+					<!-- Navigation menus in the middle -->
+					<div class="flex items-center justify-center flex-grow">
+						<custom-main-menu></custom-main-menu>
 					</div>
 				</div>
 			</div>

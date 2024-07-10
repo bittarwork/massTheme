@@ -1,7 +1,0 @@
-.store-header {
-  @apply bg-transparent fixed top-0 left-0 right-0 z-50 transition-colors duration-500;
-}
-
-.store-header.scrolled {
-  @apply bg-beige bg-opacity-50;
-}

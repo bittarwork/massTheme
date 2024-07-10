@@ -7,11 +7,11 @@
   }
 
   .topnav-has-bg & {
-    @apply bg-[color:var(--topnav-bg)];
+    @apply bg-transparent;
   }
 
   .topnav-has-gradient & {
-    @apply bg-gradient-to-r from-[color:var(--topnav-gradient-from)] to-[color:var(--topnav-gradient-to)];
+    @apply bg-transparent;
   }
 
   .topnav-has-text-color & {
@@ -29,7 +29,7 @@
   }
 
   .topnav-is-dark & {
-    @apply bg-dark text-gray-300;
+    @apply bg-transparent text-gray-300;
 
     .btn--circle-gray,
     .btn--rounded-gray,
@@ -58,16 +58,20 @@
   &.right-side {
     @apply rtl:first:pr-0 ltr:first:pl-0;
   }
+
+  &:hover {
+    @apply border-b-2 border-current;
+  }
 }
 
 /* Main Nav */
 .main-nav-container {
-  @apply min-h-[68px] lg:min-h-[84px];
+  @apply min-h-[68px] lg:min-h-[84px] bg-transparent;
 
   // Custom background Color
   .has-bg &,
   .has-bg & .sub-menu {
-    @apply bg-[color:var(--mainnav-bg)];
+    @apply bg-transparent;
   }
 
   // Custom text color
@@ -85,6 +89,10 @@
 
   &.is-active {
     @apply text-primary bg-gray-200/20;
+  }
+
+  &:hover {
+    @apply border-b-2 border-current;
   }
 }
 
