@@ -3528,12 +3528,6 @@ input[type=radio].sr-only:checked ~ div.s-verify-back {
 .s-verify-back:where([dir="rtl"], [dir="rtl"] *){left:auto;left:initial;right:10px}
 .s-verify-back svg{height:18px;width:18px}
 [dir='ltr'] .s-verify-back{transform:scale(-1)}
-@font-face {
-  font-family: "ara_etab_almonieeeregular";
-  src: url("araetabalmonieee-regular-webfont.woff2") format("woff2"), url("araetabalmonieee-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 :root {
   --infinte-color: #c9c9c9;
   --main-text-color: #27314b;

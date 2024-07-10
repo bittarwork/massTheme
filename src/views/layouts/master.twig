@@ -101,15 +101,15 @@
 }
 		</style>
 		 <script>
-																																																		      window.addEventListener("load", () => {
-																																																		        const loader = document.querySelector(".loader-init");
-																																																		        loader.classList.add("loader-init--hidden");
-																																																		        loader.addEventListener("transitionend", () => {
-																																																				  if (!document.querySelector(".loader-init")) return;
-																																																		          document.body.removeChild(loader);
-																																																		          });
-																																																		      });
-																																																		    </script>
+																																																																										      window.addEventListener("load", () => {
+																																																																										        const loader = document.querySelector(".loader-init");
+																																																																										        loader.classList.add("loader-init--hidden");
+																																																																										        loader.addEventListener("transitionend", () => {
+																																																																												  if (!document.querySelector(".loader-init")) return;
+																																																																										          document.body.removeChild(loader);
+																																																																										          });
+																																																																										      });
+																																																																										    </script>
 
 		 <script defer data-cfasync="false" src="{{ 'product-card.js'|asset }}"></script>
 		 <script defer src="{{ 'main-menu.js'|asset }}"></script>{% block head_scripts %}
@@ -117,9 +117,9 @@
 
 
 		 <script data-cfasync="false">
-																																																		        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
-																																																		        window.imageZoom = "{{theme.settings.get('imageZoom')}}"
-																																																		    </script>
+																																																																										        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
+																																																																										        window.imageZoom = "{{theme.settings.get('imageZoom')}}"
+																																																																										    </script>
 
 		{% hook 'head:start' %}
 		{% hook head %}{% block styles %}
@@ -144,11 +144,12 @@
 	{% hook 'head:end' %}
 
 	<style>
-
 		@font-face {
 
 			font-family: 'ara_etab_almonieeeregular';
-			src: url({{ 'fonts/ara_etab_almonieeeregular.ttf' | asset }}) format("truetype"), url({{ 'fonts/ara_etab_almonieeeregular.eot' | asset }}) format("embedded-opentype"), url({{'fonts/ara_etab_almonieeeregular.woff' | asset }}) format("woff");
+			src: url({{ 'fonts/AraEtabAlMonieee-Regular.ttf' | asset }}) format("truetype"), url({{ 'fonts/araetabalmonieee-regular-webfont.eot' | asset }}) format("embedded-opentype"), url({{'fonts/araetabalmonieee-regular-webfont.woff' | asset }}) format("woff"), url('fonts/araetabalmonieee-regular-webfont.woff2'| asset) format('woff2'),
+			font-weight: normal;
+			font-style: normal;
 		}
 		body {
 			font-family: 'ara_etab_almonieeeregular';
@@ -156,10 +157,10 @@
 	</style>
 </head>
 <body id="app" class="overflow-x-hidden {% hook 'body:classes' %}
-																																																		  {{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
-																																																		  {{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
-																																																		  {{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
-																																																		  ">
+																																																																										  {{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
+																																																																										  {{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
+																																																																										  {{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
+																																																																										  ">
 	<div class="loader-init"></div>
 	<noscript>
 		To get full functionality of this site you need to enable JavaScript. Here is how
