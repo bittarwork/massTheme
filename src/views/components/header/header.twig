@@ -2,11 +2,30 @@
 <header
 	class="store-header">
 	{# Main Nav #}
-	<div id="mainnav" class="main-nav-container shadow-default">
+	<div id="mainnav" class="main-nav-container">
 		<div class="inner bg-inherit">
 			<div class="container">
 				<div
 					class="flex items-center justify-between relative">
+					<!-- Logo on the right -->
+					<div class="flex items-center justify-end">
+						<a class="lg:hidden mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
+							<i class="sicon-menu text-primary text-2xl"></i>
+						</a>
+						<a class="navbar-brand" href="{{ store.url }}">
+							<img fetchpriority="high" width="100%" height="100%" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
+							{% if is_page('index') %}
+								<h1 class="sr-only">{{ store.name }}</h1>
+							{% else %}
+								<h2 class="sr-only">{{ store.name }}</h2>
+							{% endif %}
+						</a>
+					</div>
+
+					<!-- Navigation menus in the middle -->
+					<div class="flex items-center justify-center flex-grow">
+						<custom-main-menu class="menu-item"></custom-main-menu>
+					</div>
 					<!-- Icons on the left -->
 					<div class="flex items-center">
 						{% if user.type=='user' %}
@@ -22,24 +41,7 @@
 							<span class="cart-total">{{ cart.total }}</span>
 						</salla-cart-summary>
 					</div>
-					<!-- Navigation menus in the middle -->
-					<div class="flex items-center justify-center flex-grow">
-						<custom-main-menu class="no-hover"></custom-main-menu>
-					</div>
-					<!-- Logo on the right -->
-					<div class="flex items-center justify-end">
-						<a class="lg:hidden mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
-							<i class="sicon-menu text-primary text-2xl"></i>
-						</a>
-						<a class="navbar-brand" href="{{ store.url }}">
-							<img fetchpriority="high" width="100%" height="100%" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
-							{% if is_page('index') %}
-								<h1 class="sr-only">{{ store.name }}</h1>
-							{% else %}
-								<h2 class="sr-only">{{ store.name }}</h2>
-							{% endif %}
-						</a>
-					</div>
+
 				</div>
 			</div>
 		</div>

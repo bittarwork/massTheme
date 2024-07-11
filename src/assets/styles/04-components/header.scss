@@ -26,8 +26,9 @@
     @apply text-primary bg-gray-200/20;
   }
 
+  /* إزالة التأثيرات غير المرغوبة عند التمرير */
   &:hover {
-    @apply border-b-2 border-[#a5804a]; /* إضافة تأثير hover لإنشاء حدود سفلية */
+    border-bottom: 2px solid #a5804a; /* إضافة تأثير hover لإنشاء حدود سفلية */
     color: #27314b; /* الحفاظ على لون الخط عند تمرير المؤشر */
   }
 }
@@ -48,7 +49,6 @@
       left: 0;
       width: 100%;
       z-index: 29;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       transform: translate3d(0, -100%, 0);
 
       @media (max-width: 1024px) {
