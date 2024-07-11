@@ -1,41 +1,45 @@
-<footer class="store-footer bg-transparent ">
-	<div aria-label="footer" class="store-footer__inner">
+<footer class="store-footer pt-5">
+	<div class="container">
 		<div
-			class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+			class="grid grid-cols-1 lg:grid-cols-4 gap-2">
 			<!-- Logo and description -->
-			<div class="flex flex-col items-start lg:items-end w-full">
+			<div class="flex flex-col items-center  lg:items-start me-10">
 				<a class="navbar-brand" href="{{ store.url }}">
-					<img class="w-full h-auto max-w-xs" fetchpriority="high" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
+					<img class="w-full h-full" fetchpriority="high" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
 				</a>
-				<p class="text-sm lg:text-right">{{ store.slogan }}</p>
+				<p class="text-base lg:text-lg text-center lg:text-left">{{ store.slogan }}</p>
 			</div>
 
 			<!-- Store description -->
-			<div class="flex flex-col items-center  text-justify w-full">
-				<p class="text-sm mb-4">
-					<sapn>مجوهرات ماس</sapn>
-					تجيسد للجمال الازلي والاناقة الفريدة, كل
-					<br>
-					قطعة مصممة بحرفية قائفة, تحمل طابع الاصالة
-					<br>
-					والفخامة, متخصصون في قطع الضهب والالماس
-					<br>
-					المميزة منذ عام 1403 هجري
+			<div class="">
+				<p class="text-base lg:text-lg text-justify lg:text-right">
+					<span class="custom-color">مجوهرات ماس</span>
+					تجيسد للجمال الازلي والاناقة الفريدة, كل قطعة مصممة بحرفية فائقة, تحمل طابع الاصالة والفخامة, متخصصون في قطع الضهب والالماس منذ عام 1403 هجري
+
 				</p>
 			</div>
 
 			<!-- Location and social media -->
-			<div class="flex flex-col items-start lg:items-start w-full">
-				<p class="text-sm mb-4">مكان الشركة: المدينة، الدولة</p>
-				<salla-social></salla-social>
+			<div class="flex flex-col items-center lg:items-start">
+				<p class="text-base lg:text-lg text-center lg:text-left">السعودية الرياض
+					<br></p>
+				<p class="text-sm lg:text-sm text-center lg:text-left">الفرع الاول: أسواق طيبة (طريق الملك فهد)<br></p>
+				<p class="text-sm lg:text-sm text-center lg:text-left">الفرع الثاني: أسواق المجد (مخرج 10)<br></p>
+
+				<salla-social class="custom-color"></salla-social>
 			</div>
+			<div class="flex flex-col items-center lg:items-start"></div>
 		</div>
 
+
 		<!-- Footer bottom row -->
-		<div class="container mx-auto text-center py-4">
-			<p class="text-xs">&copy;
-				{{ "now"|date("Y") }}
-				{{ store.name }}. جميع الحقوق محفوظة.</p>
+		<div class="text-center mt-5 ">
+			<p class="text-sm lg:text-base">
+				&copy;
+				<span class="custom-color">{{ "now"|date("Y") }}</span>
+				<span class="custom-color">{{ store.name }}</span>.
+				<span class="custom-color">جميع الحقوق محفوظة.</span>
+			</p>
 		</div>
 	</div>
 </footer>

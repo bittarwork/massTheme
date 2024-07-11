@@ -1,22 +1,28 @@
 .store-footer {
-  @apply relative text-white mt-8 sm:mt-16 bg-transparent;
+  @apply relative text-white bg-transparent;
 
   a {
     @apply transition-opacity hover:opacity-75;
   }
 
-  &__inner {
-    @apply py-8 lg:py-16 border-b border-dashed border-b-white/10;
-  }
-
   h3 {
     @apply text-lg font-bold mb-3 lg:mb-5;
+  }
+  .container {
+    @apply mx-auto;
   }
   .span {
     @apply text-[#a5804a];
   }
-  .social-link {
-    @apply border rounded-full w-8 h-8 justify-center flex items-center hover:opacity-75 transition duration-300 text-sm;
+  .navbar-brand img {
+    @apply w-full h-auto max-w-xs;
+  }
+  p {
+    @apply text-base lg:text-lg;
+  }
+  .custom-color {
+    color: #a5804a;
+    border: 0px solid #000;
   }
 
   .contact-social {
