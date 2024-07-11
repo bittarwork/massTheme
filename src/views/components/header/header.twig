@@ -1,10 +1,3 @@
-{#
-| Variable         | Type    | Description                     |
-|------------------|---------|---------------------------------|
-| cart             | object  |                                 |
-| cart.items_count | int     |                                 |
-| cart.total       | string  | Formatted total ex: "١٠٠ ر.س"   |
-#}
 {% set important_links = theme.settings.get('important_links') %}
 <header
 	class="store-header">
@@ -13,9 +6,9 @@
 		<div class="inner bg-inherit">
 			<div class="container">
 				<div
-					class="flex items-stretch justify-between relative">
+					class="flex items-center justify-between relative">
 					<!-- Icons on the left -->
-					<div class="flex items-center justify-start">
+					<div class="flex items-center">
 						{% if user.type=='user' %}
 							<salla-user-menu avatar-only show-header></salla-user-menu>
 						{% else %}
@@ -25,7 +18,13 @@
 						{% endif %}
 						<salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
 							<i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i>
+							<span class="cart-items-count">{{ cart.items_count }}</span>
+							<span class="cart-total">{{ cart.total }}</span>
 						</salla-cart-summary>
+					</div>
+					<!-- Navigation menus in the middle -->
+					<div class="flex items-center justify-center flex-grow">
+						<custom-main-menu class="no-hover"></custom-main-menu>
 					</div>
 					<!-- Logo on the right -->
 					<div class="flex items-center justify-end">
@@ -40,10 +39,6 @@
 								<h2 class="sr-only">{{ store.name }}</h2>
 							{% endif %}
 						</a>
-					</div>
-					<!-- Navigation menus in the middle -->
-					<div class="flex items-center justify-center flex-grow">
-						<custom-main-menu></custom-main-menu>
 					</div>
 				</div>
 			</div>
