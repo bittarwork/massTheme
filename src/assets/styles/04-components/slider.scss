@@ -209,3 +209,28 @@ salla-slider {
     justify-content: center;
   }
 }
+
+/* Bullet pagination */
+salla-slider {
+  .swiper-pagination-bullet {
+    width: 20px; /* عرض النقاط */
+    height: 20px; /* ارتفاع النقاط */
+    border-radius: 50%; /* تحويل النقاط إلى دوائر */
+    background: #27314b; /* لون النقاط */
+    opacity: 0.5; /* شفافية النقاط */
+    transition: opacity 0.3s, background-color 0.3s; /* انتقال تأثيرات الشفافية واللون */
+    margin: 0 15px; /* مسافة بين النقاط */
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1; /* شفافية النقاط النشطة */
+    background-color: #a5804a; /* لون النقاط النشطة */
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 3rem; /* مسافة من أسفل السلايدر */
+    display: flex;
+    justify-content: center; /* توزيع الأزرار بشكل متساوٍ */
+    gap: 5vw;
+  }
+}

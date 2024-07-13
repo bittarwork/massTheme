@@ -5205,7 +5205,7 @@ salla-slider .swiper-pagination-bullet {
   width: 20px; /* عرض النقاط */
   height: 20px; /* ارتفاع النقاط */
   border-radius: 50%; /* تحويل النقاط إلى دوائر */
-  background: #000; /* لون النقاط */
+  background: #27314b; /* لون النقاط */
   opacity: 0.5; /* شفافية النقاط */
   transition: opacity 0.3s, background-color 0.3s; /* انتقال تأثيرات الشفافية واللون */
   margin: 0 5px; /* مسافة بين النقاط */
@@ -5220,6 +5220,26 @@ salla-slider .swiper-pagination-bullets.swiper-pagination-horizontal{bottom:1.5r
 salla-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   justify-content: center;
+}
+/* Bullet pagination */
+salla-slider .swiper-pagination-bullet {
+  width: 20px; /* عرض النقاط */
+  height: 20px; /* ارتفاع النقاط */
+  border-radius: 50%; /* تحويل النقاط إلى دوائر */
+  background: #27314b; /* لون النقاط */
+  opacity: 0.5; /* شفافية النقاط */
+  transition: opacity 0.3s, background-color 0.3s; /* انتقال تأثيرات الشفافية واللون */
+  margin: 0 15px; /* مسافة بين النقاط */
+}
+salla-slider .swiper-pagination-bullet-active {
+  opacity: 1; /* شفافية النقاط النشطة */
+  background-color: #a5804a; /* لون النقاط النشطة */
+}
+salla-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 3rem; /* مسافة من أسفل السلايدر */
+  display: flex;
+  justify-content: center; /* توزيع الأزرار بشكل متساوٍ */
+  gap: 5vw;
 }
 .product-entry{position:relative;display:flex;height:100%;justify-content:space-between;border-radius:0.5rem;--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity));transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms}
 .product-entry:hover{--tw-shadow:5px 10px 30px #2B2D340D;;--tw-shadow-colored:5px 10px 30px var(--tw-shadow-color);box-shadow:0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), 5px 10px 30px #2B2D340D;;box-shadow:var(--tw-ring-offset-shadow, 0 0 rgba(0,0,0,0)), var(--tw-ring-shadow, 0 0 rgba(0,0,0,0)), var(--tw-shadow)}
@@ -6118,6 +6138,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .lg\:text-base{font-size:1rem;line-height:1.5rem}
 .lg\:text-lg{font-size:1.125rem;line-height:1.75rem}
 .lg\:text-sm{font-size:0.875rem;line-height:1.25rem}
+.lg\:text-8xl{font-size:6rem;line-height:1}
 .lg\:shadow-default{--tw-shadow:5px 10px 30px #2B2D340D;;--tw-shadow-colored:5px 10px 30px var(--tw-shadow-color);box-shadow:0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), 5px 10px 30px #2B2D340D;;box-shadow:var(--tw-ring-offset-shadow, 0 0 rgba(0,0,0,0)), var(--tw-ring-shadow, 0 0 rgba(0,0,0,0)), var(--tw-shadow)}}
 @media (min-width: 1280px){
 .xl\:gap-8{gap:2rem}
