@@ -831,7 +831,50 @@
             "title": "who-we-are-bannar",
             "icon": "sicon-store",
             "path": "home.aboutus-bannar",
-            "fields": []
+            "fields": [
+                {
+                    "id": "aboutus_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان",
+                    "description": "اكتب العنوان البديل",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "مجوهرات ماس... اختيارك الافضل",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "75"
+                },
+                {
+                    "id": "aboutus-paragraph",
+                    "type": "string",
+                    "format": "text",
+                    "label": "النص الاضافي بداخله",
+                    "description": "اكتب النص البديل",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "مجوهرات ماس تجيسد للجمال الازلي والاناقة الفريدة, كل قطعة مصممة بحرفية فائقة, تحمل طابع الاصالة والفخامة, متخصصون في قطع الضهب والالماس منذ عام 1403 هجري.",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": null
+                },
+                {
+                    "id": "aboutus_side_iamge",
+                    "type": "string",
+                    "format": "image",
+                    "label": "المنتج على الجانب",
+                    "description": "قم بادخال الصورة هنا",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
+                }
+            ]
         }
     ],
     "support_url": "https://salla.com/",
