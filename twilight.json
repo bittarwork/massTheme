@@ -825,6 +825,13 @@
             "icon": "sicon-arrow-swap",
             "path": "home.home-banner-with-slider-background",
             "fields": []
+        },
+        {
+            "key": "b76f9421-186d-4054-8c4d-1706e5b9fa61",
+            "title": "who-we-are-bannar",
+            "icon": "sicon-store",
+            "path": "home.aboutus-bannar",
+            "fields": []
         }
     ],
     "support_url": "https://salla.com/",
