@@ -825,6 +825,13 @@
             "icon": "sicon-arrow-swap",
             "path": "home.home-banner-with-slider-background",
             "fields": []
+        },
+        {
+            "key": "fe93c56e-c6e9-4813-87d8-a7f86da0dee3",
+            "title": "about us",
+            "icon": "sicon-store",
+            "path": "home.aboutus-banner",
+            "fields": []
         }
     ],
     "support_url": "https://salla.com/",
