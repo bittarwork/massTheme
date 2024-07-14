@@ -581,7 +581,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .h-full{height:100%}
 .h-lg-banner{height:428px}
 .h-px{height:1px}
-.h-screen{height:100vh}
 .max-h-0{max-height:0px}
 .max-h-8{max-height:2rem}
 .max-h-\[300px\]{max-height:300px}
@@ -610,7 +609,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .min-w-full{min-width:100%}
 .max-w-16{max-width:4rem}
 .max-w-3xl{max-width:48rem}
-.max-w-full{max-width:100%}
 .max-w-lg{max-width:32rem}
 .max-w-xs{max-width:20rem}
 .flex-1{flex:1 1 0%}
@@ -754,7 +752,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .pt-6{padding-top:1.5rem}
 .pt-8{padding-top:2rem}
 .text-center{text-align:center}
-.text-right{text-align:right}
 .text-justify{text-align:justify}
 .text-start{text-align:left}
 .text-end{text-align:right}
