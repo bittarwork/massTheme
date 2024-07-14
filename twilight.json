@@ -845,7 +845,7 @@
                     "multilanguage": false,
                     "required": false,
                     "minLength": 6,
-                    "maxLength": 30
+                    "maxLength": null
                 },
                 {
                     "id": "aboutus_paragraph",
@@ -860,7 +860,7 @@
                     "multilanguage": false,
                     "required": false,
                     "minLength": 6,
-                    "maxLength": 30
+                    "maxLength": null
                 },
                 {
                     "id": "aboutus_image",
