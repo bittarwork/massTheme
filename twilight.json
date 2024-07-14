@@ -831,7 +831,62 @@
             "title": "about us",
             "icon": "sicon-store",
             "path": "home.aboutus",
-            "fields": []
+            "fields": [
+                {
+                    "id": "aboutus_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان",
+                    "description": "اكتب العنوان البديل هنا",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "مجوهرات ماس اختيارك الافضل...",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "45"
+                },
+                {
+                    "id": "aboutus_paragraph",
+                    "type": "string",
+                    "format": "text",
+                    "label": "النص الثانوي",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرات ماس مجوهرا",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "150"
+                },
+                {
+                    "id": "aboutus_image_one",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة الاساسية",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
+                },
+                {
+                    "id": "aboutus_image_two",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة البديلة",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
+                }
+            ]
         }
     ],
     "support_url": "https://salla.com/",
