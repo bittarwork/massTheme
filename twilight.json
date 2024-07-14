@@ -825,68 +825,6 @@
             "icon": "sicon-arrow-swap",
             "path": "home.home-banner-with-slider-background",
             "fields": []
-        },
-        {
-            "key": "e62755f3-4fb8-48c8-8ab8-d93a187b21de",
-            "title": "about us",
-            "icon": "sicon-store",
-            "path": "home.aboutus-banner",
-            "fields": [
-                {
-                    "id": "aboutus_title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "العنوان",
-                    "description": "قم بوضل العنوان البديل هنا",
-                    "labelHTML": null,
-                    "placeholder": "Placeholder text ..",
-                    "icon": "sicon-format-text-alt",
-                    "value": "مجوهرات ماس اختيارك الافصل..",
-                    "multilanguage": false,
-                    "required": false,
-                    "minLength": 6,
-                    "maxLength": "150"
-                },
-                {
-                    "id": "aboutus_paragraph",
-                    "type": "string",
-                    "format": "text",
-                    "label": "النص",
-                    "description": "قم بوضع النص البديل هنا",
-                    "labelHTML": null,
-                    "placeholder": "Placeholder text ..",
-                    "icon": "sicon-format-text-alt",
-                    "value": "تجسيد الجمال الازلي",
-                    "multilanguage": false,
-                    "required": false,
-                    "minLength": 6,
-                    "maxLength": "150"
-                },
-                {
-                    "id": "aboutus_image",
-                    "type": "string",
-                    "format": "image",
-                    "label": "الصورة الاساسية",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": false
-                },
-                {
-                    "id": "aboutus_images_hover",
-                    "type": "string",
-                    "format": "image",
-                    "label": "الصورة الثانوية",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": false
-                }
-            ]
         }
     ],
     "support_url": "https://salla.com/",
