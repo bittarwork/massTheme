@@ -873,6 +873,18 @@
                     "icon": "sicon-image",
                     "value": null,
                     "required": false
+                },
+                {
+                    "id": "aboutus_images_hover",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة الثانوية",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
                 }
             ]
         }
