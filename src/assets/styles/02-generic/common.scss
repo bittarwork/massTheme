@@ -20,6 +20,34 @@ html {
   font-size: 5rem;
   margin: 5vh 0;
 }
+.has-placeholder {
+  background-color: #f0f0f0; /* لون الخلفية للعناصر التي لا تحتوي على صورة */
+}
+.bg-custom {
+  background-color: #a5804a;
+}
+.text-custom {
+  color: #a5804a;
+}
+.hover\:bg-white:hover {
+  background-color: #ffffff;
+}
+.hover\:text-custom:hover i {
+  color: #a5804a;
+}
+.has-placeholder:hover {
+  background-color: #ffffff !important;
+  border-color: #a5804a !important;
+}
+.has-placeholder:hover i {
+  color: #a5804a !important;
+}
+.hover\:border-custom:hover {
+  border-color: #a5804a !important;
+}
+.hover\:shadow-custom:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .overlay-larg {
   margin-right: 5vw;
   font-size: 7rem;
