@@ -6,10 +6,14 @@
 | image.alt   | ?string |                                                                  |
 | position    | Int     | Sorting number start from zero                                   |
 #}
-<section class="s-block s-block--fixed-banner wide-placeholder">
-    <div class="container">
-        <a href="{{ url }}" class="banner banner--fixed overflow-hidden" aria-label="Banner {{ image.alt }}">
-            <img width="1200" height="300" src="{{ image.url }}" alt="{{ image.alt|trim ? image.alt : 'fixed banner' }}"/>
-        </a>
-    </div>
+<section class="">
+	<h1 class="larg_heading font-slim text-center">منتجاتنا</h1>
+	<div class="relative">
+		<a href="{{ url }}" class=" overflow-hidden" aria-label="Banner {{ image.alt }}">
+			<img class="w-full h-full object-cover more_than_half_hieght" src="{{ image.url }}" alt="{{ image.alt|trim ? image.alt : 'fixed banner' }}"/>
+			<div class="absolute bottom-0 right-0 text-white  p-4">
+				<p class="overlay-larg ">الذهب</p>
+			</div>
+		</a>
+	</div>
 </section>

@@ -10,9 +10,9 @@
 #}
 <section class="s-block s-block--hero-slider s-block--full-bg wide-placeholder">
 	<salla-slider id="main-slider-{{ position }}" auto-play show-controls="false" pagination slider-config='{
-				        "lazy": false,
-				        "loop": true
-				      }' type="fullwidth">
+						        "lazy": false,
+						        "loop": true
+						      }' type="fullwidth">
 		<div slot="items">
 			{% for slide in component.slides %}
 				<div class="swiper-slide w-full min-h-[300px] lg:min-h-[528px] bg-dark relative">
@@ -22,9 +22,9 @@
 						<div
 							class="w-4/6 text-center md:w-7/12 lg:w-5/12 text-black">
 							<!-- تغيير لون الخط إلى الأسود -->
-							<h2 data-swiper-parallax="-500" class="lg:text-8xl text-5xl font-bold leading-tight mb-4">{{ slide.title }}</h2>
+							<h2 data-swiper-parallax="-500" class="lg:text-8xl text-5xl font-bold leading-tight mb-4 font-slim-larg ">{{ slide.title }}</h2>
 							<!-- زيادة حجم الخط -->
-							<p data-swiper-parallax="-300" class="line-clamp-2 description text-3xl">{{ slide.description }}</p>
+							<p data-swiper-parallax="-300" class="line-clamp-2 description text-3xl font-slim-larg ">{{ slide.description }}</p>
 							<!-- زيادة حجم الخط -->
 						</div>
 					</div>
