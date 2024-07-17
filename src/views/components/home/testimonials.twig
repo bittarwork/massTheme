@@ -7,5 +7,21 @@
 | hide_customer_info | bool                      | show/hide info customers            |
 #}
 <section class="s-block s-block--testimonials container overflow-hidden">
-    <salla-reviews {{ display_all_url ? "display-all-link" : "" }} limit="{{ limit }}" sort="{{ sort }}" {{ hide_customer_info ? 'hide-customer-info' : '' }} type="{{type}}"></salla-reviews>
-</section> 
+	<salla-reviews {{ display_all_url ? "display-all-link" : "" }} limit="{{ limit }}" sort="{{ sort }}" {{ hide_customer_info ? 'hide-customer-info' : '' }} type="{{type}}"></salla-reviews>
+</section>
+<h2>{{ trans('blocks.home.testimonials') }}</h2>
+
+{% for item in items %}
+	<img src="{{ item.avatar }}" alt="{{ item.name }}"/>
+
+	<p>{{ item.text }}</p>
+	<div>
+		<h4>{{ item.name }}</h4>
+	</div>
+	<div>
+		{% for i in range(0, item.stars) %}
+			<i>*</i>
+		{% endfor %}
+	</div>
+{% endfor %}
+sadasdas
