@@ -16,9 +16,14 @@ html {
   font-size: 2em;
   font-weight: 100;
 }
+.slim-font{
+  font-weight: 100;
+  
+}
 .larg_heading {
   font-size: 5rem;
   margin: 5vh 0;
+ 
 }
 .has-placeholder {
   background-color: #f0f0f0; /* لون الخلفية للعناصر التي لا تحتوي على صورة */
@@ -47,6 +52,7 @@ html {
 }
 .hover\:shadow-custom:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
 }
 .overlay-larg {
   margin-right: 5vw;

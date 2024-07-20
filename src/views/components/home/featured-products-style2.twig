@@ -15,40 +15,30 @@
 | is_slider                     | Bool      | Products should be movable or static                                |
 #}
 <!-- Basic Product Card component usage -->
+<!-- Basic Product Card component usage -->
+<!-- Basic Product Card component usage -->
 {% set component_id='featured-products-style2-' ~ position %}
 {% set is_vertical = theme.settings.get('vertical_fixed_products', true) %}
-<section class="s-block s-block-tabs s-block--tabs-produtcs s-block--full-bg {{ is_slider ? 'as-slider':'as-grid' }} bg-gray-100 py-8 sm:py-16" id="{{ component_id }}">
-    <div class="container">
+<section class="bg-gray-100 py-8 sm:py-16" id="{{ component_id }}">
+    <div class="container mx-auto">
 
-        <div class="tabs hide-scroll">
+        <div class="tabs hide-scroll mb-8">
             {% for section in items %}
-                <salla-button class="tab-trigger {{ loop.first?'is-active':'' }}" data-target="{{ component_id }}-{{ section.id }}" data-component-id="{{ component_id }}" fill="outline">
-                    {{ section.title }}
-                </salla-button>
+                <h1 class="text-right text-2xl font-light">{{ section.title }}</h1>
             {% endfor %}
         </div>
 
         <div class="tabs-wrapper">
             {% for section in items %}
-                <div id="{{ component_id }}-{{ section.id }}" class="tabs__item {{ loop.first?'is-active':'' }}">
-                    {% if is_slider %}
-                        <salla-products-slider 
-                            slider-id="section-{{ section.id }}-slider" 
-                            source="selected" 
-                            source-value="[{{ section.products|map((product) => product.id)|join(',') }}]" 
-                            product-card-component="custom-product-card">
-                        </salla-products-slider>
-                    {% else %}
-                        <salla-products-list 
-                            source="selected" 
-                            source-value="[{{ section.products|map((product) => product.id)|join(',') }}]" 
-                            product-card-component="custom-product-card" 
-                            {{is_vertical ? '' : 'horizontal-cards'}}>
-                        </salla-products-list>
-                    {% endif %}
+                <div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }}">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {% set products = section.products | slice(0, 4) %} <!-- Limit to 4 products -->
+                        {% for product in products %}
+                            <custom-product-card product="{{ product|json_encode }}" class="flex flex-col"></custom-product-card>
+                        {% endfor %}
+                    </div>
                 </div>
             {% endfor %}
         </div>
     </div>
 </section>
-
