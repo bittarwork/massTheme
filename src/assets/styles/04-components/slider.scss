@@ -188,49 +188,31 @@ model-viewer[style*="width"]:before {
 
 /* Bullet pagination */
 salla-slider {
-  .swiper-pagination-bullet {
-    width: 20px; /* عرض النقاط */
-    height: 20px; /* ارتفاع النقاط */
-    border-radius: 50%; /* تحويل النقاط إلى دوائر */
-    background: #27314b; /* لون النقاط */
-    opacity: 0.5; /* شفافية النقاط */
-    transition: opacity 0.3s, background-color 0.3s; /* انتقال تأثيرات الشفافية واللون */
-    margin: 0 5px; /* مسافة بين النقاط */
-  }
-
-  .swiper-pagination-bullet-active {
-    opacity: 1; /* شفافية النقاط النشطة */
-    background-color: #a5804a; /* لون النقاط النشطة */
-  }
-
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    @apply bottom-3 sm:bottom-6;
+  .swiper-pagination-custom {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
   }
-}
 
-/* Bullet pagination */
-salla-slider {
   .swiper-pagination-bullet {
-    width: 20px; /* عرض النقاط */
-    height: 20px; /* ارتفاع النقاط */
-    border-radius: 50%; /* تحويل النقاط إلى دوائر */
-    background: #27314b; /* لون النقاط */
-    opacity: 0.5; /* شفافية النقاط */
-    transition: opacity 0.3s, background-color 0.3s; /* انتقال تأثيرات الشفافية واللون */
-    margin: 0 15px; /* مسافة بين النقاط */
+    width: 24px;
+    height: 24px;
+    background: none;
+    margin: 0 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s, background-color 0.3s;
   }
 
   .swiper-pagination-bullet-active {
-    opacity: 1; /* شفافية النقاط النشطة */
-    background-color: #a5804a; /* لون النقاط النشطة */
+    opacity: 1;
   }
 
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 3rem; /* مسافة من أسفل السلايدر */
-    display: flex;
-    justify-content: center; /* توزيع الأزرار بشكل متساوٍ */
-    gap: 5vw;
+  .swiper-pagination {
+    display: none; /* إخفاء النقاط الافتراضية */
   }
 }

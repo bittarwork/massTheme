@@ -4,6 +4,7 @@ import Anime from "./partials/anime";
 import initTootTip from "./partials/tooltip";
 import AppHelpers from "./app-helpers";
 import '../../views/components/product/CustomProductCard';
+import "./partials/custom-pagination";
 
 class App extends AppHelpers {
   constructor() {
@@ -372,3 +373,4 @@ document.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
