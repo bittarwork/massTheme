@@ -8,12 +8,16 @@
 #}
 <section class="">
 	<h1 class="larg_heading font-slim text-center">منتجاتنا</h1>
-	<div class="relative">
-		<a href="{{ url }}" class=" overflow-hidden" aria-label="Banner {{ image.alt }}">
+	<div class="relative overflow-hidden group">
+		<a href="{{ url }}" class="block" aria-label="Banner {{ image.alt }}">
 			<img class="w-full h-full object-cover more_than_half_hieght" src="{{ image.url }}" alt="{{ image.alt|trim ? image.alt : 'fixed banner' }}"/>
-			<div class="absolute bottom-0 right-0 text-white  p-4">
-				<p class="overlay-larg ">الذهب</p>
+			<div class="absolute bottom-0 right-0 text-white p-4">
+				<p class="overlay-larg">الذهب</p>
 			</div>
 		</a>
+		<div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 custom-mask">
+			<a href="#" class="text-black text-7xl hover:text-[#a5804a] hover:text-9xl transition-all duration-200">عيار 18</a>
+			<a href="#" class="text-black text-7xl hover:text-[#a5804a] hover:text-9xl transition-all duration-200">عيار 21</a>
+		</div>
 	</div>
 </section>

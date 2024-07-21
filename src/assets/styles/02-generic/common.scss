@@ -79,10 +79,24 @@ input[type="file"] {
   border-radius: 0;
   
 }
+
 .zbyz:hover {
   background-color: #a5804a    ;
   color:  #ffffff;
 }
+/* custom-styles.css */
+.custom-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.group:hover .custom-mask {
+  opacity: 1;
+}
+
 body {
   @apply bg-gray-50;
   [type="text"],

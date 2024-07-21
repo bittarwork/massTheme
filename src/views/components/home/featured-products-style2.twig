@@ -16,7 +16,6 @@
 				<div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }}">
 					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 						{% set products = section.products | slice(0, 4) %}
-						<!-- Limit to 4 products -->
 						{% for product in products %}
 							<custom-product-card product="{{ product|json_encode }}" class="flex flex-col"></custom-product-card>
 						{% endfor %}

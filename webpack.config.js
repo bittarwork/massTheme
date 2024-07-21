@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const ThemeWatcher = require("@salla.sa/twilight/watcher.js");
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
@@ -19,7 +20,7 @@ module.exports = {
     "wishlist-card": asset("js/partials/wishlist-card.js"),
     checkout: [asset("js/cart.js"), asset("js/thankyou.js")],
     pages: [asset("js/loyalty.js"), asset("js/brands.js")],
-    product: [asset("js/product.js"), asset("js/products.js")],
+    product: [asset("js/product.js"), asset("js/products.js"), asset("js/CustomProductCard.js")], // إضافة ملف CustomProductCard.js هنا
     order: asset("js/order.js"),
     testimonials: asset("js/testimonials.js"),
   },
