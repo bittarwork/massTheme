@@ -1,0 +1,22 @@
+
+.hidden{
+  display: none;
+}
+
+[class^=sicon-], [class*=" sicon-"] {
+  font-family: sallaicons !important;
+  font-style: normal;
+  font-weight: 100;
+  font-variant: normal;
+  text-transform: none;
+  cursor: pointer;
+
+}
+
+i[class*="sicon-"]:hover:after {
+    display: block;
+}
+i[class*="sicon-"]:hover {
+  background-color: #a5804a    ;
+  color: #fff;
+}
