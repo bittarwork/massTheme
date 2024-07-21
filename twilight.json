@@ -196,6 +196,18 @@
             "icon": "sicon-format-fill",
             "value": "#ffffff",
             "required": false
+        },
+        {
+            "id": "image_background",
+            "type": "string",
+            "format": "image",
+            "label": "خلفية الموقع",
+            "description": "قم برفع الصورة هنا",
+            "labelHTML": null,
+            "placeholder": "e.g. https://hostname.com/image.png",
+            "icon": "sicon-image",
+            "value": null,
+            "required": false
         }
     ],
     "components": [
