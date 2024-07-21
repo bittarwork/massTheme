@@ -7,19 +7,46 @@ class CustomProductCard extends HTMLElement {
   connectedCallback() {
     this.product = this.product || JSON.parse(this.getAttribute('product'));
     this.render();
+    this.initFavoriteIcon();
+  }
+
+  initFavoriteIcon() {
+    if (window.app?.status === 'ready') {
+      this.updateFavoriteIcon();
+    } else {
+      document.addEventListener('theme::ready', () => this.updateFavoriteIcon());
+    }
+  }
+
+  updateFavoriteIcon() {
+    if (!salla.config.isGuest()) {
+      salla.storage.get('salla::wishlist', []).forEach(id => {
+        if (id === this.product.id) {
+          this.toggleFavoriteIcon(true);
+        }
+      });
+    }
+  }
+
+  toggleFavoriteIcon(isAdded) {
+    const btn = this.shadowRoot.querySelector('.s-product-card-wishlist-btn');
+    if (btn) {
+      btn.classList.toggle('s-product-card-wishlist-added', isAdded);
+      btn.classList.toggle('not-added', !isAdded);
+      btn.classList.toggle('pulse-anime', isAdded);
+    }
   }
 
   render() {
-    // تحقق من وجود promotion_title وتخزين قيمة العرض بناءً على ذلك
     const promotionTitleDisplay = this.product.promotion_title ? 'block' : 'none';
-    
+
     this.shadowRoot.innerHTML = `
       <style>
         .custom-product-card {
           background-color: #ffffff;
           padding: 16px;
           color: #000; 
-          max-width: 35vw;
+          max-width: 35vw;  
           margin: 3vh;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           text-align: center;
@@ -66,7 +93,7 @@ class CustomProductCard extends HTMLElement {
         }
         .custom-product-card:hover .product-price {
           display: inline-block;
-          font-size : 0.7em;
+          font-size: 0.7em;
         }
         .custom-product-card:hover .separator {
           width: auto;
@@ -103,30 +130,44 @@ class CustomProductCard extends HTMLElement {
           left: 16px;
           color: #a5804a;
           margin: 1vw 1vh;
-          font-size : 1em;
+          font-size: 1em;
           display: ${promotionTitleDisplay};
           transition: display 0.5s ease;
         }
         .custom-product-card:hover .custom-product-promotion-title {
           display: block;
         }
+        .s-product-card-wishlist-btn {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          cursor: pointer;
+          border: none;
+          background: transparent;
+        }
+        .s-product-card-wishlist-btn.s-product-card-wishlist-added .sicon-heart {
+          color: red;
+        }
       </style>
       <div class="custom-product-card">
         <div class="custom-product-promotion-title">${this.product.promotion_title || ''}</div>
         <div class="custom-product-card-image">
           <a href="${this.product.url}">
-            <img src="${this.product.image?.url}" alt="${this.product.image?.alt}" />
+            <img src="${this.product.image?.url || ''}" alt="${this.product.image?.alt || ''}" />
           </a>
         </div>
         <div class="custom-product-card-content">
           <h3 class="custom-product-card-title">
             <span class="product-name"><a href="${this.product.url}">${this.product.name}</a></span>
             <div class="separator"></div>
-            <span class="product-price">${this.product.price} ر.س</span>
+            <span class="product-price">${this.product.price || ''} ر.س</span>
           </h3>
-          <p class="custom-product-card-description">${this.product.description}</p>
+          <p class="custom-product-card-description">${this.product.description || ''}</p>
           <button class="custom-product-card-add-to-cart-btn">أضف الى السلة</button>
         </div>
+        <button class="s-product-card-wishlist-btn" aria-label="Add to wishlist" onclick="salla.wishlist.toggle(${this.product.id})">
+          <i class="sicon-heart"></i>
+        </button>
       </div>
     `;
   }

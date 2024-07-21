@@ -25,6 +25,7 @@
 			<h1 class="font-bold text-5xl pr-8" id="page-main-title">{{ page.title|raw }}</h1>
 			<div class="flex items-center justify-start flex-grow text-5xl">
 				<salla-menu source="header"></salla-menu>
+
 			</div>
 		</nav>
 		<div class="flex items-start flex-col md:flex-row">
@@ -34,33 +35,22 @@
 			{% endif %}
 
 			<div class="main-content flex-1 w-full {{ filters ? 'ltr:lg:ml-8 rtl:lg:mr-8' : '' }}">
+
 				{% hook 'product:index.items.start' %}
-				<div
-					class="flex min-h-screen flex-wrap" id="product-list"><!-- هنا ستظهر بطاقات المنتجات -->
+				<div class="flex min-h-screen">
+					<salla-products-list class="flex-1 min-w-0 overflow-auto " product-card-component="custom-product-card" autoload="true" source="{{ page.slug }}" source-value="{{ page.id }}" {{ filters ?'filters-Results':'' }}></salla-products-list>
 				</div>
 				{% hook 'product:index.items.end' %}
 			</div>
 		</div>
 	</div>
 
+
 	{% if store.settings.category.testimonial_enabled %}
 		{% component 'home.testimonials' %}
 	{% endif %}
 {% endblock %}
 
-{% block scripts %} <script defer src="{{ 'product.js' | asset }}"></script>
-	 <script>
-		    document.addEventListener('DOMContentLoaded', async function() {
-		        const response = await fetch(`/api/products?source={{ page.slug }}&source_value={{ page.id }}`);
-		        const products = await response.json();
-	
-		        const productListElement = document.getElementById('product-list');
-	
-		        products.forEach(product => {
-		            const productCard = document.createElement('custom-product-card');
-		            productCard.setAttribute('product', JSON.stringify(product));
-		            productListElement.appendChild(productCard);
-		        });
-		    });
-		</script>
+{% block scripts %}
+	 <script defer src="{{ 'product.js' | asset }}"></script>
 {% endblock %}
