@@ -279,6 +279,12 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+  .tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+
 /*
 ** Single page
 */

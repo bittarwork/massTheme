@@ -4,20 +4,19 @@
 {% set is_vertical = theme.settings.get('vertical_fixed_products', true) %}
 <section class="py-8 sm:py-16" id="{{ component_id }}">
 	<div class="container mx-auto">
-
 		<div class="tabs hide-scroll mb-8">
 			{% for section in items %}
 				<h1 class="text-right text-5xl font-light mr-5">{{ section.title }}</h1>
 			{% endfor %}
 		</div>
 
-		<div class="tabs-wrapper">
+		<div class="">
 			{% for section in items %}
-				<div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }}">
+				<div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }} my-">
 					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 						{% set products = section.products | slice(0, 4) %}
 						{% for product in products %}
-							<custom-product-card product="{{ product|json_encode }}" class="flex flex-col"></custom-product-card>
+							<custom-product-card product="{{ product|json_encode }}" class="flex flex-col custom-product-card h-full"></custom-product-card>
 						{% endfor %}
 					</div>
 				</div>

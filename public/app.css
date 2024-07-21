@@ -514,6 +514,8 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .mx-3{margin-left:0.75rem;margin-right:0.75rem}
 .mx-auto{margin-left:auto;margin-right:auto}
 .my-5{margin-top:1.25rem;margin-bottom:1.25rem}
+.my-10{margin-top:2.5rem;margin-bottom:2.5rem}
+.my-1{margin-top:0.25rem;margin-bottom:0.25rem}
 .-mb-52{margin-bottom:-13rem}
 .-mt-1{margin-top:-0.25rem}
 .-mt-62{margin-top:-248px}
@@ -3906,6 +3908,10 @@ body.modal-open [id^=gb-widget] {
   animation-name: pulse-anime;
   animation-timing-function: ease-in-out;
 }
+.tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 /*
 ** Single page
 */
@@ -4528,62 +4534,39 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 .main-nav-container{min-height:68px}
 @media (min-width: 1024px){
 .main-nav-container{min-height:84px}}
+.main-nav-container {
+  background-color: transparent; /* جعل الخلفية شفافة */
+}
 .has-bg .main-nav-container, .has-bg .main-nav-container .sub-menu{background-color:transparent}
 .has-text-color .main-nav-container{color:var(--mainnav-text-color)}
-.menu-item a {
-  color: #27314b;
-  font-size: 1em;
-}
-.menu-item a:hover {
-  color: #a5804a;
-  border-bottom: 1px solid #a5804a;
-}
-.menu-item a:active {
-  color: #a5804a;
-}
-.menu-item{display:flex;align-items:center;--tw-text-opacity:1;color:rgba(39, 49, 75, 1);color:rgba(39, 49, 75, var(--tw-text-opacity));transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms}
-@media (min-width: 640px){
-.menu-item{font-size:0.875rem;line-height:1.25rem}}
-.menu-item.logout{--tw-text-opacity:1;color:rgba(248, 113, 113, 1);color:rgba(248, 113, 113, var(--tw-text-opacity))}
-.menu-item.is-active{background-color:rgba(229, 231, 235, 0.2);color:#a5804a;color:var(--color-primary)}
 /* Sticky Header */
 .main-nav-container.animated .inner {
   transition: top 0.5s, transform 0.5s, opacity 0.4s;
 }
-.main-nav-container.fixed-pinned .inner {
+.main-nav-container.fixed-pinned .inner, .main-nav-container.fixed-header .inner {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 29;
+  z-index: 100; /* التأكد من أن الهيدر في المقدمة */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transform: translate3d(0, -100%, 0);
+  background-color: transparent; /* جعل الخلفية شفافة */
 }
 @media (max-width: 1024px) {
-  .main-nav-container.fixed-pinned .inner {
-    transform: none;
-    top: -70px;
-  }
-}
-.main-nav-container.fixed-pinned .navbar-brand img {
-  max-height: 40px;
-}
-.main-nav-container.fixed-pinned .navbar-brand h4 {
-  line-height: 1;
-}
-.main-nav-container.fixed-pinned .main-menu > li > a {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.main-nav-container.fixed-header .inner {
-  transform: translate3d(0, 0, 0);
-}
-@media (max-width: 1024px) {
-  .main-nav-container.fixed-header .inner {
-    transform: none;
+  .main-nav-container.fixed-pinned .inner, .main-nav-container.fixed-header .inner {
     top: 0;
   }
+}
+.main-nav-container.fixed-pinned .navbar-brand img, .main-nav-container.fixed-header .navbar-brand img {
+  max-height: 40px;
+}
+.main-nav-container.fixed-pinned .navbar-brand h4, .main-nav-container.fixed-header .navbar-brand h4 {
+  line-height: 1;
+}
+.main-nav-container.fixed-pinned .main-menu > li > a, .main-nav-container.fixed-header .main-menu > li > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .navbar-brand{margin-top:0.5rem;margin-bottom:0.5rem;display:flex;align-items:center}
 @media (min-width: 1024px){
@@ -5340,8 +5323,9 @@ salla-slider.photos-slider .swiper-pagination-bullet:not(.swiper-pagination-bull
 }
 salla-slider .swiper-pagination-bullet {
   width: 20px;
-  border-radius: 5px;
-  background: #fff;
+  height: 20px;
+  border-radius: 50%;
+  background: #27314b;
   opacity: 0.3;
 }
 salla-slider .swiper-pagination-bullet-active {
@@ -5375,31 +5359,6 @@ model-viewer[style*=width]:before{
 .blog-slider .swiper-slide img{max-height:480px;min-height:380px}
 @media (min-width: 768px){
 .blog-slider .swiper-slide img{max-height:680px}}
-/* Bullet pagination */
-salla-slider .swiper-pagination-custom {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 0;
-}
-salla-slider .swiper-pagination-bullet {
-  width: 24px;
-  height: 24px;
-  background: none;
-  margin: 0 5px;
-  opacity: 0.5;
-  transition: opacity 0.3s, background-color 0.3s;
-}
-salla-slider .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-salla-slider .swiper-pagination {
-  display: none; /* إخفاء النقاط الافتراضية */
-}
 .product-entry{position:relative;display:flex;height:100%;justify-content:space-between;border-radius:0.5rem;--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity));transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms}
 .product-entry:hover{--tw-shadow:5px 10px 30px #2B2D340D;;--tw-shadow-colored:5px 10px 30px var(--tw-shadow-color);box-shadow:0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), 5px 10px 30px #2B2D340D;;box-shadow:var(--tw-ring-offset-shadow, 0 0 rgba(0,0,0,0)), var(--tw-ring-shadow, 0 0 rgba(0,0,0,0)), var(--tw-shadow)}
 .product-entry--wishlist{flex-direction:column;justify-content:space-between;padding:1rem}
