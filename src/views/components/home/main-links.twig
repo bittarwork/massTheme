@@ -13,13 +13,13 @@
 <section class="s-block s-block--categories {{ component.merge_with_top_component and position ? 'merge-with-top-component' : '' }} {{ not component.title and component.merge_with_top_component ? 'merged-has-no-title' : '' }}">
 	<div class="container mx-auto px-4 py-8">
 		{% if component.title %}
-			<h2 class="text-center text-3xl font-bold mb-6">{{ component.title }}</h2>
+			<h2 class="text-center text-5xl slim-font mb-6">{{ component.title }}</h2>
 		{% endif %}
-		<div class="flex justify-center flex-wrap space-x-6 space-y-6">
+		<div class="flex justify-center flex-wrap gap-3">
 			{% if component.show_cats %}
 				{% for cat in component.categories %}
-					<div class="flex flex-col items-center m-4">
-						<a href="{{ cat.url }}" class="relative w-24 h-24 bg-custom rounded-full flex items-center justify-center mb-2.5 {{ cat.image ? '' : 'has-placeholder' }} hover:bg-white hover:shadow-custom transition-colors duration-300">
+					<div class="flex flex-col items-center">
+						<a href="{{ cat.url }}" class="relative w-24 h-24 bg-custom rounded-full flex items-center justify-center {{ cat.image ? '' : 'has-placeholder' }} hover:bg-white hover:shadow-custom transition-colors duration-300">
 							{% if cat.image %}
 								<img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full" width="64" height="64" alt="{{ cat.name }}"/>
 							{% else %}
@@ -29,18 +29,6 @@
 						</a>
 						<h2 class="text-center text-lg">{{ cat.name }}</h2>
 					</div>
-				{% endfor %}
-			{% else %}
-				{% for link in component.links %}
-					{% if link.title %}
-						<div class="flex flex-col items-center m-4">
-							<a href="{{ link.url }}" class="relative w-24 h-24 bg-custom rounded-full flex items-center justify-center mb-2.5 hover:bg-white hover:shadow-custom transition-colors duration-300">
-								<i class="{{ link.icon }} text-2xl text-white relative transition-colors duration-300"></i>
-								<div class="absolute w-20 h-20 border-2 border-white rounded-full hover:border-custom transition-colors duration-300"></div>
-							</a>
-							<h2 class="text-center text-lg">{{ link.title }}</h2>
-						</div>
-					{% endif %}
 				{% endfor %}
 			{% endif %}
 		</div>
