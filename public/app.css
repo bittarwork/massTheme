@@ -697,7 +697,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .bg-gray-100{--tw-bg-opacity:1;background-color:rgba(243, 244, 246, 1);background-color:rgba(243, 244, 246, var(--tw-bg-opacity))}
 .bg-gray-50{--tw-bg-opacity:1;background-color:rgba(249, 250, 251, 1);background-color:rgba(249, 250, 251, var(--tw-bg-opacity))}
 .bg-green-50{--tw-bg-opacity:1;background-color:rgba(240, 253, 244, 1);background-color:rgba(240, 253, 244, var(--tw-bg-opacity))}
-.bg-inherit{background-color:inherit}
 .bg-primary{background-color:#a5804a;background-color:var(--color-primary)}
 .bg-white{--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity))}
 .bg-opacity-50{--tw-bg-opacity:0.5}
@@ -4533,30 +4532,31 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 .topnav-link-item:last-child:where([dir="rtl"], [dir="rtl"] *){border-width:0px;padding-left:0px}
 .topnav-link-item.right-side:first-child:where([dir="ltr"], [dir="ltr"] *){padding-left:0px}
 .topnav-link-item.right-side:first-child:where([dir="rtl"], [dir="rtl"] *){padding-right:0px}
-.main-nav-container.fixed-pinned .inner, .main-nav-container.fixed-header .inner {
-  position: fixed;
+/* Main Nav */
+.main-nav-container{min-height:68px}
+@media (min-width: 1024px){
+.main-nav-container{min-height:84px}}
+.main-nav-container {
+  background-color: rgba(255, 255, 255, 0.5); /* لون أبيض مع شفافية خفيفة */
+  /* Custom background Color */
+  /* Custom text color */
+}
+.has-bg .main-nav-container, .has-bg .main-nav-container .sub-menu{background-color:rgba(255, 255, 255, 0.8);background-color:rgba(255, 255, 255, var(--tw-bg-opacity));--tw-bg-opacity:0.8 /* تعيين الشفافية الخفيفة */}
+.has-text-color .main-nav-container{color:var(--mainnav-text-color)}
+/* Sticky Header */
+.main-nav-container.fixed-header {
+  position: fixed; /* لتثبيت الهيدر */
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 100; /* التأكد من أن الهيدر في المقدمة */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff; /* تعيين اللون الأبيض غير الشفاف */
+  z-index: 1000; /* التأكد من أن الهيدر فوق جميع العناصر الأخرى */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); /* خلفية بيضاء مع شفافية خفيفة */
 }
-@media (max-width: 1024px) {
-  .main-nav-container.fixed-pinned .inner, .main-nav-container.fixed-header .inner {
-    top: 0;
-  }
-}
-.main-nav-container.fixed-pinned .navbar-brand img, .main-nav-container.fixed-header .navbar-brand img {
-  max-height: 40px;
-}
-.main-nav-container.fixed-pinned .navbar-brand h4, .main-nav-container.fixed-header .navbar-brand h4 {
-  line-height: 1;
-}
-.main-nav-container.fixed-pinned .main-menu > li > a, .main-nav-container.fixed-header .main-menu > li > a {
-  padding-top: 20px;
-  padding-bottom: 20px;
+/* Content Area */
+.content-area {
+  margin-top: 68px; /* أو القيمة المناسبة لتجنب تداخل المحتوى مع الهيدر */
 }
 .navbar-brand{margin-top:0.5rem;margin-bottom:0.5rem;display:flex;align-items:center}
 @media (min-width: 1024px){

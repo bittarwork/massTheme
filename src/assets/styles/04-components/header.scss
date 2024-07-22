@@ -6,39 +6,40 @@
   &.right-side{
     @apply rtl:first:pr-0 ltr:first:pl-0
   }
-}
+}/* Main Nav */
 .main-nav-container {
-  &.fixed-pinned, &.fixed-header {
-    .inner {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100; /* التأكد من أن الهيدر في المقدمة */
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff; /* تعيين اللون الأبيض غير الشفاف */
-
-      @media (max-width: 1024px) {
-        top: 0;
-      }
-    }
-
-    .navbar-brand {
-      img {
-        max-height: 40px;
-      }
-
-      h4 {
-        line-height: 1;
-      }
-    }
-
-    .main-menu > li > a {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+  @apply min-h-[68px] lg:min-h-[84px];
+  background-color: rgba(255, 255, 255, 0.5); /* لون أبيض مع شفافية خفيفة */
+  
+  /* Custom background Color */
+  .has-bg &,
+  .has-bg & .sub-menu {
+    @apply bg-white bg-opacity-80; /* تعيين الشفافية الخفيفة */
   }
+
+  /* Custom text color */
+  .has-text-color & {
+    @apply text-[color:var(--mainnav-text-color)];
+  }
+}
+
+/* Sticky Header */
+.main-nav-container {
+  &.fixed-header {
+    position: fixed; /* لتثبيت الهيدر */
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* التأكد من أن الهيدر فوق جميع العناصر الأخرى */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* خلفية بيضاء مع شفافية خفيفة */
+  }
+}
+
+/* Content Area */
+.content-area {
+  margin-top: 68px; /* أو القيمة المناسبة لتجنب تداخل المحتوى مع الهيدر */
 }
 
 
