@@ -134,24 +134,41 @@ salla-slider.photos-slider {
   opacity: 0.5;
 }
 
-// bullet pagination -------
-salla-slider{
+salla-slider {
   .swiper-pagination-bullet {
-    width: 20px;
-    border-radius: 5px;
-    background: #fff;
+    width: 30px; /* حجم الأيقونة */
+    height: 30px; /* حجم الأيقونة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
     opacity: 0.3;
+
+    &::before {
+      content: '\f3a5'; /* رمز الأيقونة من Font Awesome */
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 24px; /* حجم الأيقونة */
+      color: #27314b  ;
+    }
 
     &-active {
       opacity: 1;
-      background-color: var(--color-primary);
+      
+      &::before {
+        color: #27314b  ;
+      }
     }
   }
 
-  .swiper-pagination-bullets.swiper-pagination-horizontal{
-    @apply bottom-3 sm:bottom-6; 
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    bottom: 20px; 
   }
 }
+
 
 
 // Offer slider

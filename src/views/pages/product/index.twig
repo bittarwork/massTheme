@@ -46,20 +46,7 @@
 	{% endif %}
 {% endblock %}
 
-{% block scripts %} <script defer src="{{ 'product.js' | asset }}"></script>
-	 <script>
-			document.addEventListener('DOMContentLoaded', async () => {
-				const productList = document.getElementById('product-list');
-	
-				// Replace with the URL or method to fetch your product data
-				const response = await fetch('/api/products?slug={{ page.slug }}&id={{ page.id }}');
-				const products = await response.json();
-	
-				products.forEach(product => {
-					const productCard = document.createElement('custom-product-card');
-					productCard.setAttribute('product', JSON.stringify(product));
-					productList.appendChild(productCard);
-				});
-			});
-		</script>
+{% block scripts %}
+	 <script defer src="{{ 'product.js' | asset }}"></script>
+
 {% endblock %}
