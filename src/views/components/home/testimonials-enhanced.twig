@@ -1,1 +1,11 @@
-<salla-comments></salla-comments>
+<section class="w-1/2 h-40vh m-auto p-10 bg[#f0f0f0]">
+	<salla-slider id="main-slider-{{ position }}" auto-play show-controls="false" pagination>
+		<div slot="items">
+			{% for slide in component.testi_coliction %}
+				<div class="swiper-slide w-full min-h-[300px] lg:min-h-[528px] bg-dark relative">
+					<div style="background-image: url({{ slide.testi_image }});" class="bg-center absolute inset-0"></div>
+				</div>
+			{% endfor %}
+		</div>
+	</salla-slider>
+</section>
