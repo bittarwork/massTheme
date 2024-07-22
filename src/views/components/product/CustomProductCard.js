@@ -44,26 +44,16 @@ class CustomProductCard extends HTMLElement {
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-          .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 16px;
-            padding: 16px;
-          }
-          
           .custom-product-card {
             background-color: #ffffff;
-            padding: 16px;
+            padding: 1vw 3vh;
             color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             position: relative;
             transition: background-color 0.5s ease, transform 0.5s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden;
-            height: 100%;
+          height: 55vh;
+            
           }
           
           .custom-product-card:hover {
@@ -72,7 +62,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card h3 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 100;
             display: flex;
             justify-content: center;
@@ -94,7 +84,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card .product-price {
-            display: none;
+            display: inline-block;
             color: #a5804a;
             transition: display 0.5s ease;
             margin: 0 0.4vw;
@@ -112,7 +102,6 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card:hover .product-price {
-            display: inline-block;
             font-size: 0.7em;
           }
           
@@ -122,34 +111,28 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card-image {
-            text-align: center;
-            flex: 1 1 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 16px;
-            height: 200px; 
+          height: 20vh;
             overflow: hidden;
           }
           
           .custom-product-card-image img {
-            max-width: 100%;
             max-height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            object-fit: cover; /* ضبط حجم الصورة */
           }
+          
+        
           
           .custom-product-card-content {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            flex: 1;
           }
           
           .custom-product-card-description {
-            font-size: 1em;
+            font-size: 0.9em; /* تقليل حجم الخط للوصف */
             text-align: right;
             font-weight: 100;
-            margin-bottom: 16px;
           }
           
           .custom-product-card-add-to-cart-btn {
@@ -160,9 +143,8 @@ class CustomProductCard extends HTMLElement {
             font-size: 0.8em;
             padding: 1vh 2vw;
             transition: background-color 0.5s ease, color 0.5s ease;
-            margin-top: 16px;
-            align-self: center; /* يجعل الزر في المنتصف عرضيا */
-            width: auto; /* يحدد عرض الزر حسب المحتوى فقط */
+            align-self: center;
+            width: auto;
             font-family:"etab" !important ;
             font-size:1em;
             display: flex;
