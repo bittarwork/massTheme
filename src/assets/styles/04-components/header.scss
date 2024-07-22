@@ -7,31 +7,7 @@
     @apply rtl:first:pr-0 ltr:first:pl-0
   }
 }
-/* Main Nav */
 .main-nav-container {
-  @apply min-h-[68px] lg:min-h-[84px];
-  background-color: transparent; /* جعل الخلفية شفافة */
-  
-  // Custom background Color
-  .has-bg &,
-  .has-bg & .sub-menu{
-    @apply bg-transparent;
-  }
-
-  // Custom text color
-  .has-text-color & {
-    @apply text-[color:var(--mainnav-text-color)];
-  }
-}
-
-/* Sticky Header */
-.main-nav-container {
-  &.animated {
-    .inner {
-      transition: top 0.5s, transform 0.5s, -webkit-transform 0.5s, opacity 0.4s;
-    }
-  }
-
   &.fixed-pinned, &.fixed-header {
     .inner {
       position: fixed;
@@ -41,9 +17,9 @@
       width: 100%;
       z-index: 100; /* التأكد من أن الهيدر في المقدمة */
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      background-color: transparent; /* جعل الخلفية شفافة */
+      background-color: #ffffff; /* تعيين اللون الأبيض غير الشفاف */
 
-      @media (max-width: 1024px){
+      @media (max-width: 1024px) {
         top: 0;
       }
     }
@@ -61,10 +37,10 @@
     .main-menu > li > a {
       padding-top: 20px;
       padding-bottom: 20px;
-      
     }
   }
 }
+
 
 
 

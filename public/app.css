@@ -489,19 +489,16 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .-top-5{top:-1.25rem}
 .bottom-0{bottom:0px}
 .bottom-1{bottom:0.25rem}
+.bottom-5{bottom:1.25rem}
 .left-0{left:0px}
 .right-0{right:0px}
+.right-10{right:2.5rem}
 .top-0{top:0px}
 .top-1{top:0.25rem}
 .top-1\.5{top:0.375rem}
 .top-2{top:0.5rem}
 .top-24{top:6rem}
 .top-full{top:100%}
-.bottom-5{bottom:1.25rem}
-.right-10{right:2.5rem}
-.bottom-2{bottom:0.5rem}
-.right-3{right:0.75rem}
-.right-5{right:1.25rem}
 .-z-1{z-index:-1}
 .z-10{z-index:10}
 .z-20{z-index:20}
@@ -562,7 +559,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .hidden{display:none}
 .\!h-36{height:9rem !important}
 .h-0{height:0px}
-.h-1\/4{height:25%}
 .h-10{height:2.5rem}
 .h-12{height:3rem}
 .h-14{height:3.5rem}
@@ -598,7 +594,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .\!w-36{width:9rem !important}
 .\!w-\[160px\]{width:160px !important}
 .w-1\/2{width:50%}
-.w-1\/4{width:25%}
 .w-10{width:2.5rem}
 .w-12{width:3rem}
 .w-16{width:4rem}
@@ -4538,19 +4533,6 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 .topnav-link-item:last-child:where([dir="rtl"], [dir="rtl"] *){border-width:0px;padding-left:0px}
 .topnav-link-item.right-side:first-child:where([dir="ltr"], [dir="ltr"] *){padding-left:0px}
 .topnav-link-item.right-side:first-child:where([dir="rtl"], [dir="rtl"] *){padding-right:0px}
-/* Main Nav */
-.main-nav-container{min-height:68px}
-@media (min-width: 1024px){
-.main-nav-container{min-height:84px}}
-.main-nav-container {
-  background-color: transparent; /* جعل الخلفية شفافة */
-}
-.has-bg .main-nav-container, .has-bg .main-nav-container .sub-menu{background-color:transparent}
-.has-text-color .main-nav-container{color:var(--mainnav-text-color)}
-/* Sticky Header */
-.main-nav-container.animated .inner {
-  transition: top 0.5s, transform 0.5s, opacity 0.4s;
-}
 .main-nav-container.fixed-pinned .inner, .main-nav-container.fixed-header .inner {
   position: fixed;
   top: 0;
@@ -4559,7 +4541,7 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
   width: 100%;
   z-index: 100; /* التأكد من أن الهيدر في المقدمة */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  background-color: transparent; /* جعل الخلفية شفافة */
+  background-color: #ffffff; /* تعيين اللون الأبيض غير الشفاف */
 }
 @media (max-width: 1024px) {
   .main-nav-container.fixed-pinned .inner, .main-nav-container.fixed-header .inner {

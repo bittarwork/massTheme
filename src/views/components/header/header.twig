@@ -1,13 +1,4 @@
-{#
-| Variable         | Type    | Description                     |
-|------------------|---------|---------------------------------|
-| cart             | object  |                                 |
-| cart.items_count | int     |                                 |
-| cart.total       | string  | Formatted total ex: "١٠٠ ر.س"   |
-#}
-<header
-	class="store-header floatingg">
-	{# Main Nav #}
+<header class="store-header bg-white">
 	<div id="mainnav" class="main-nav-container bg-white">
 		<div class="inner bg-inherit">
 			<div class="container">
@@ -40,6 +31,7 @@
 		</div>
 	</div>
 </header>
+
 {% if store.scope %}
 	<salla-scopes selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
 {% endif %}
