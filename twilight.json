@@ -932,6 +932,18 @@
                     "value": [],
                     "minLength": 1,
                     "maxLength": "4"
+                },
+                {
+                    "id": "background_image_bottom_right",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة الخلفية على اليمين والاسفل",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
                 }
             ]
         }
