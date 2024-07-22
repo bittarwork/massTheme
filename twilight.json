@@ -905,7 +905,35 @@
             "title": "testimonials",
             "icon": "sicon-store",
             "path": "home.testimonials-enhanced",
-            "fields": []
+            "fields": [
+                {
+                    "id": "testi_coliction",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "Collection",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": "التعليقات",
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "testi_coliction.testi_image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة التعليق",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": "4"
+                }
+            ]
         }
     ],
     "support_url": "https://salla.com/",
