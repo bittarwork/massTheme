@@ -1,4 +1,4 @@
-<section class="pb-6 bg-[#f0f0f0] new-background relative">
+<section class="pb-5 bg-[#f0f0f0] new-background relative">
 	<h1 class="text-5xl text-center font-slim">قالو عنا</h1>
 	<salla-slider id="main-slider-{{ position }}" class="w-1/2 h-50vh mx-auto" auto-play show-controls="false" pagination>
 		<div slot="items">
@@ -9,8 +9,7 @@
 			{% endfor %}
 		</div>
 	</salla-slider>
-	<div class="absolute bottom-0 right-15 w-1/4 h-1/4">
-		<img src="{{ component.background_image_bottom_right }}" alt="Bottom Right Image" class="object-cover w-full h-full">
+	<div class="absolute bottom-5 right-10" style="width: 18vw; height: 18vh;">
+		<img src="{{ component.background_image_bottom_right }}" alt="Bottom Right Image" style="object-fit: cover; width: 100%; height: 100%;">
 	</div>
-
 </section>
