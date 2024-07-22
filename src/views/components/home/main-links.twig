@@ -23,7 +23,17 @@
 							{% if cat.image %}
 								<img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full" width="64" height="64" alt="{{ cat.name }}"/>
 							{% else %}
-								<i class="{{ cat.icon }} text-2xl text-white relative transition-colors duration-300"></i>
+								<i class="fas
+																	{% if cat.name == 'عقود' %} fa-link
+																	{% elseif cat.name == 'أطفال' %} fa-child
+																	{% elseif cat.name == 'أطقم' %} fa-gem
+																	{% elseif cat.name == 'كفوف وخلاخل' %} fa-hand-holding
+																	{% elseif cat.name == 'خواتم توينز' %} fa-ring
+																	{% elseif cat.name == 'خواتم' %} fa-ring
+																	{% elseif cat.name == 'حلق' %} fa-ear-ring
+																	{% elseif cat.name == 'أساور' %} fa-bracelet
+																	{% else %} fa-question {% endif %}
+																	text-2xl text-white relative transition-colors duration-300"></i>
 							{% endif %}
 							<div class="absolute w-20 h-20 border-2 border-white rounded-full hover:border-custom"></div>
 						</a>
