@@ -10,7 +10,6 @@
 | component.links[].url              | string   |                                                                              |
 | position                           | int      | Sorting number start from zero                                               |
 #}
-
 <section class="s-block s-block--categories {{ component.merge_with_top_component and position ? 'merge-with-top-component' : '' }} {{ not component.title and component.merge_with_top_component ? 'merged-has-no-title' : '' }}">
 	<div class="container mx-auto px-4 py-8">
 		{% if component.title %}
@@ -24,18 +23,17 @@
 							{% if cat.image %}
 								<img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full" width="64" height="64" alt="{{ cat.name }}"/>
 							{% else %}
-								<i class="material-icons {{
-									                                    {% if cat.name == 'عقود' %} 'diamond'
-									                                    {% elseif cat.name == 'أطفال' %} 'child_care'
-									                                    {% elseif cat.name == 'أطقم' %} 'package'
-									                                    {% elseif cat.name == 'كفوف وخلاخل' %} 'handshake'
-									                                    {% elseif cat.name == 'خواتم توينز' %} 'ring_volume'
-									                                    {% elseif cat.name == 'خواتم' %} 'ring_volume'
-									                                    {% elseif cat.name == 'حلق' %} 'earbuds'
-									                                    {% elseif cat.name == 'أساور' %} 'bracelet'
-									                                    {% else %} 'help'
-									                                    {% endif %}
-									                                    }} text-2xl text-white relative transition-colors duration-300"></i>
+								<i class="fas
+																{% if cat.name == 'عقود' %} fa-gem
+																{% elseif cat.name == 'أطفال' %} fa-child
+																{% elseif cat.name == 'أطقم' %} fa-box
+																{% elseif cat.name == 'كفوف وخلاخل' %} fa-hand-paper
+																{% elseif cat.name == 'خواتم توينز' %} fa-ring
+																{% elseif cat.name == 'خواتم' %} fa-ring
+																{% elseif cat.name == 'حلق' %} fa-ear
+																{% elseif cat.name == 'أساور' %} fa-dice-d6
+																{% else %} fa-question {% endif %}
+																text-2xl text-white relative transition-colors duration-300"></i>
 							{% endif %}
 							<div class="absolute w-20 h-20 border-2 border-white rounded-full hover:border-custom"></div>
 						</a>
