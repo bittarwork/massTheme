@@ -1,9 +1,10 @@
-<section class="w-1/2 h-40vh m-auto p-10 bg[#f0f0f0]">
-	<salla-slider id="main-slider-{{ position }}" auto-play show-controls="false" pagination>
+<section class="w-full h-full bg-[#f0f0f0]">
+	<h1 class="text-7xl text-center mt-10">قالو عنا</h1>
+	<salla-slider id="main-slider-{{ position }}" class="w-1/2 h-35vh mx-auto" auto-play show-controls="false" pagination>
 		<div slot="items">
 			{% for slide in component.testi_coliction %}
-				<div class="swiper-slide w-full min-h-[300px] lg:min-h-[528px] bg-dark relative">
-					<div style="background-image: url({{ slide.testi_image }});" class="bg-center absolute inset-0"></div>
+				<div class="swiper-slide w-full min-h-[300px] lg:min-h-[528px]">
+					<div style="background-image: url({{ slide.testi_image }}); background-size: contain; background-repeat: no-repeat; background-position: center;" class="bg-center absolute inset-0"></div>
 				</div>
 			{% endfor %}
 		</div>
