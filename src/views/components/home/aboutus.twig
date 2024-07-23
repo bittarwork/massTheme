@@ -19,8 +19,10 @@
 		</div>
 		<!-- الفيديو -->
 		<div class="flex-1 p-4 flex justify-center items-center">
-			<video class="rounded-lg max-w-full h-auto" autoplay loop muted playsinline>
-				<source src="{{ component.video_url_about_us }}" type="video/mp4">
+			<video controls class="rounded-lg max-w-full h-auto">
+				<source
+				src="{{ component.video_url_aboutus_new }}" type="video/mp4">
+				<!-- يمكنك إضافة مصادر أخرى بأنواع مختلفة للفيديو -->
 				متصفحك لا يدعم عنصر الفيديو.
 			</video>
 		</div>
