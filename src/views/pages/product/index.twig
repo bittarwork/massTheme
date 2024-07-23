@@ -55,7 +55,7 @@
 
 				{% hook 'product:index.items.start' %}
 				<div class="flex min-h-screen">
-					<salla-products-list class="flex-1 min-w-0 overflow-auto " product-card-component="custom-product-card" source="{{ page.slug }}" source-value="{{ page.id }}" {{ filters ?'filters-Results':'' }}></salla-products-list>
+					<salla-products-list product-card-component="custom-product-card" class="flex-1 min-w-0 overflow-auto " source="{{ page.slug }}" source-value="{{ page.id }}" {{ filters ?'filters-Results':'' }}></salla-products-list>
 				</div>
 				{% hook 'product:index.items.end' %}
 			</div>
