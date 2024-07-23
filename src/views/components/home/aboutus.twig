@@ -17,9 +17,12 @@
 				</a>
 			</div>
 		</div>
-		<!-- الصورة -->
+		<!-- الفيديو -->
 		<div class="flex-1 p-4 flex justify-center items-center">
-			<img src="{{ component.aboutus_image_one }}" alt="صورة" class="rounded-lg max-w-full h-auto">
+			<video class="rounded-lg max-w-full h-auto" autoplay loop muted playsinline>
+				<source src="{{ component.aboutus_video }}" type="video/mp4">
+				متصفحك لا يدعم عنصر الفيديو.
+			</video>
 		</div>
 	</div>
 </div>
