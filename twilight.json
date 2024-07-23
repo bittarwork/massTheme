@@ -897,6 +897,21 @@
                     "icon": "sicon-image",
                     "value": null,
                     "required": false
+                },
+                {
+                    "id": "video_url_about_us",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "ازا اردت وضع فيديو ف قم بوضع الرابط هنا",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
                 }
             ]
         },
