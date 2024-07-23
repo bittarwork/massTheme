@@ -899,19 +899,19 @@
                     "required": false
                 },
                 {
-                    "id": "video_url_about_us",
+                    "id": "video_url_aboutus_new",
                     "type": "string",
                     "format": "url",
                     "inputType": "url",
-                    "label": "ازا اردت وضع فيديو ف قم بوضع الرابط هنا",
+                    "label": "رابط الفيديو",
                     "description": null,
                     "labelHTML": null,
                     "placeholder": "e.g. https://salla.sa",
                     "icon": "sicon-link",
-                    "value": null,
+                    "value": "https://www.apple.com/105/media/us/apple-vision-pro/2024/6e1432b2-fe09-4113-a1af-f20987bcfeee/anim/experience-productivity/large.mp4",
                     "required": false,
                     "minLength": 6,
-                    "maxLength": 30
+                    "maxLength": "1000"
                 }
             ]
         },
