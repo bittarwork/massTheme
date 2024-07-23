@@ -546,6 +546,8 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .mt-5{margin-top:1.25rem}
 .mt-6{margin-top:1.5rem}
 .mt-8{margin-top:2rem}
+.me-2{margin-right:0.5rem}
+.me-2\.5{margin-right:0.625rem}
 .line-clamp-1{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}
 .line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
 .block{display:block}
@@ -592,6 +594,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .min-h-\[34px\]{min-height:34px}
 .min-h-full{min-height:100%}
 .min-h-screen{min-height:100vh}
+.min-h-\[30vh\]{min-height:30vh}
 .\!w-36{width:9rem !important}
 .\!w-\[160px\]{width:160px !important}
 .w-1\/3{width:33.333333%}
@@ -611,6 +614,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .w-full{width:100%}
 .min-w-0{min-width:0px}
 .min-w-full{min-width:100%}
+.min-w-\[30vh\]{min-width:30vh}
 .max-w-16{max-width:4rem}
 .max-w-3xl{max-width:48rem}
 .max-w-6xl{max-width:72rem}
@@ -6339,11 +6343,13 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .ltr\:pr-24:where([dir="ltr"], [dir="ltr"] *){padding-right:6rem}
 .ltr\:pr-5:where([dir="ltr"], [dir="ltr"] *){padding-right:1.25rem}
 .ltr\:pr-px:where([dir="ltr"], [dir="ltr"] *){padding-right:1px}
+.ltr\:pr-3:where([dir="ltr"], [dir="ltr"] *){padding-right:0.75rem}
 .ltr\:text-end:where([dir="ltr"], [dir="ltr"] *){text-align:right}
 .ltr\:even\:border-l:nth-child(even):where([dir="ltr"], [dir="ltr"] *){border-left-width:1px}
 @media (min-width: 768px){
 .ltr\:md\:pr-12:where([dir="ltr"], [dir="ltr"] *){padding-right:3rem}
 .ltr\:md\:pr-8:where([dir="ltr"], [dir="ltr"] *){padding-right:2rem}
+.ltr\:md\:pr-10:where([dir="ltr"], [dir="ltr"] *){padding-right:2.5rem}
 .ltr\:md\:text-left:where([dir="ltr"], [dir="ltr"] *){text-align:left}}
 @media (min-width: 1024px){
 .ltr\:lg\:ml-8:where([dir="ltr"], [dir="ltr"] *){margin-left:2rem}
@@ -6380,12 +6386,14 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .rtl\:pl-5:where([dir="rtl"], [dir="rtl"] *){padding-left:1.25rem}
 .rtl\:pl-px:where([dir="rtl"], [dir="rtl"] *){padding-left:1px}
 .rtl\:pr-5:where([dir="rtl"], [dir="rtl"] *){padding-right:1.25rem}
+.rtl\:pl-3:where([dir="rtl"], [dir="rtl"] *){padding-left:0.75rem}
 .rtl\:text-right:where([dir="rtl"], [dir="rtl"] *){text-align:right}
 .rtl\:text-start:where([dir="rtl"], [dir="rtl"] *){text-align:left}
 .rtl\:even\:border-r:nth-child(even):where([dir="rtl"], [dir="rtl"] *){border-right-width:1px}
 @media (min-width: 768px){
 .rtl\:md\:pl-12:where([dir="rtl"], [dir="rtl"] *){padding-left:3rem}
 .rtl\:md\:pl-8:where([dir="rtl"], [dir="rtl"] *){padding-left:2rem}
+.rtl\:md\:pl-10:where([dir="rtl"], [dir="rtl"] *){padding-left:2.5rem}
 .rtl\:md\:text-right:where([dir="rtl"], [dir="rtl"] *){text-align:right}}
 @media (min-width: 1024px){
 .rtl\:lg\:ml-8:where([dir="rtl"], [dir="rtl"] *){margin-left:2rem}
