@@ -52,8 +52,7 @@ class CustomProductCard extends HTMLElement {
             text-align: center;
             position: relative;
             transition: background-color 0.5s ease, transform 0.5s ease;
-          height: 58vh;
-            
+            height: 59vh;
           }
           
           .custom-product-card:hover {
@@ -62,7 +61,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card h3 {
-            font-size: 1.2em;
+            font-size: 1.5em;
             font-weight: 100;
             display: flex;
             justify-content: center;
@@ -84,7 +83,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card .product-price {
-            display: inline-block;
+            display: none; /* إخفاء السعر بشكل افتراضي */
             color: #a5804a;
             transition: display 0.5s ease;
             margin: 0 0.4vw;
@@ -102,6 +101,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card:hover .product-price {
+            display: inline-block; /* عرض السعر عند hover */
             font-size: 0.7em;
           }
           
@@ -111,7 +111,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card-image {
-          height: 20vh;
+            height: 20vh;
             overflow: hidden;
           }
           
@@ -120,8 +120,6 @@ class CustomProductCard extends HTMLElement {
             max-width: 100%;
             object-fit: cover; /* ضبط حجم الصورة */
           }
-          
-        
           
           .custom-product-card-content {
             display: flex;
@@ -145,7 +143,7 @@ class CustomProductCard extends HTMLElement {
             transition: background-color 0.5s ease, color 0.5s ease;
             align-self: center;
             width: auto;
-            font-family:"etab" !important ;
+            font-family:"etab" !important;
             font-size:1em;
             display: flex;
             align-items: center;

@@ -1,6 +1,6 @@
 <section class="pb-5 bg-[#f0f0f0] new-background relative">
 	<h1 class="text-5xl text-center font-slim">قالو عنا</h1>
-	<salla-slider id="main-slider-{{ position }}" class="w-1/2 h-50vh mx-auto" auto-play show-controls="false" pagination>
+	<salla-slider id="main-slider-{{ position }}" class="w-1/3 mx-auto" auto-play show-controls="false" pagination>
 		<div slot="items">
 			{% for slide in component.testi_coliction %}
 				<div class="swiper-slide w-full min-h-[25vh] lg:min-h-[35vh]">
@@ -9,7 +9,6 @@
 			{% endfor %}
 		</div>
 	</salla-slider>
-	<div class="absolute bottom-5 right-10" style="width: 18vw; height: 18vh;">
-		<img src="{{ component.background_image_bottom_right }}" alt="Bottom Right Image" style="object-fit: cover; width: 100%; height: 100%;">
-	</div>
+	<img src="{{ component.background_image_bottom_right }}" alt="Bottom Right Image" class="absolute bottom-5 right-20" style="width: 12vw;">
+	<div></div>
 </section>
