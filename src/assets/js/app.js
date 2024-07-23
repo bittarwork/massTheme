@@ -5,7 +5,6 @@ import initTootTip from "./partials/tooltip";
 import AppHelpers from "./app-helpers";
 import '../../views/components/product/CustomProductCard';
 import "./partials/custom-pagination";
-import './CustomProductCard.js'; 
 
 class App extends AppHelpers {
   constructor() {
