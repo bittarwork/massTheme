@@ -166,7 +166,7 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    <div class="container py-5">
+    <div class="container overflow-hidden">
         <h1 class="font-slim text-4xl sm:text-7xl rtl:pl-3 ltr:pr-3" id="page-main-title">{{ page.title|raw }}</h1>
         <custom-main-menu class="text-xl sm:text-2xl"></custom-main-menu>
 		<div class="flex flex-col gap-4 items-center sm:items-start sm:flex-row" id="product-{{ product.id }}" style="justify-content: center;">
@@ -226,7 +226,7 @@
 
     </div>
 
-    <div class="sidebar w-full sm:w-1/2 pb-8 sm:pb-16 overflow-hidden flex-1 max-w-[90vw] sm:max-w-[35vw]">
+    <div class="sidebar sm:w-1/2 pb-8 sm:pb-16 overflow-hidden flex-1 max-w-[90vw] sm:max-w-[35vw]">
         <salla-slider id="details-slider-{{ product.id }}" type="thumbs" loop="true" auto-play pagination show-controls="false" style="height: 45vh;">
             {% if product.promotion_title %}
                 <div class="promotion-title">{{ product.promotion_title }}</div>
@@ -255,7 +255,7 @@
         <div class="container p-4 sm:p-10">
 			<div class="container my-10 text-right" style="margin-right: 10px;">
 				<h2 class="text-xl sm:text-2xl mb-2" style="display: inline-block; margin-left: 10px;">منتجات قد تعجبك</h2>
-				<div class="w-[20vw] sm:w-[10vw] h-1 bg-[#a5804a] inline-block"></div>
+				<div class="w-[20vw] sm:w-[10vw] h-[1px] bg-[#a5804a] inline-block"></div>
 			</div>
 
             <salla-products-slider source="related" product-card-component="custom-product-card" source-value="{{product.id}}" display-all-url></salla-products-slider>
