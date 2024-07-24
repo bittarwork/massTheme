@@ -52,7 +52,7 @@ class CustomProductCard extends HTMLElement {
             text-align: center;
             position: relative;
             transition: background-color 0.5s ease, transform 0.5s ease;
-            height: 59vh;
+            height: 40vh;
           }
           
           .custom-product-card:hover {
