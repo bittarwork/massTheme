@@ -13,31 +13,31 @@
 									<img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full" width="64" height="64" alt="{{ cat.name }}"/>
 								{% else %}
 									{% if cat.name == 'عقود' %}
-										<i class="heroicons-solid:gift text-2xl"></i>
-										<!-- أيقونة هدية تمثل العقود -->
+										<i class="fa fa-gem text-2xl icon"></i>
+										<!-- أيقونة ماسة تمثل العقود -->
 									{% elseif cat.name == 'أطفال' %}
-										<i class="heroicons-solid:child text-2xl"></i>
+										<i class="fa fa-child text-2xl icon"></i>
 										<!-- أيقونة طفل تمثل الأطفال -->
 									{% elseif cat.name == 'أطقم' %}
-										<i class="heroicons-solid:archive text-2xl"></i>
-										<!-- أيقونة أرشيف تمثل الأطقم -->
+
+										<!-- أيقونة صندوق مفتوح تمثل الأطقم -->
 									{% elseif cat.name == 'كفوف وخلاخل' %}
-										<i class="heroicons-solid:link text-2xl"></i>
+
 										<!-- أيقونة رابط تمثل الكفوف والخلاخل -->
 									{% elseif cat.name == 'خواتم توينز' %}
-										<i class="heroicons-solid:ring text-2xl"></i>
+
 										<!-- أيقونة خاتم تمثل خواتم التوينز -->
 									{% elseif cat.name == 'خواتم' %}
-										<i class="heroicons-solid:ring text-2xl"></i>
+										<i class="fa fa-ring text-2xl icon"></i>
 										<!-- أيقونة خاتم تمثل الخواتم -->
 									{% elseif cat.name == 'حلق' %}
-										<i class="heroicons-solid:ear text-2xl"></i>
-										<!-- أيقونة أذن تمثل الحلق -->
+
+										<!-- أيقونة حلق تمثل الحلق -->
 									{% elseif cat.name == 'أساور' %}
-										<i class="heroicons-solid:bracelet text-2xl"></i>
+
 										<!-- أيقونة سوار تمثل الأساور -->
-									{% else %}
-										<i class="heroicons-solid:question-mark-circle text-2xl"></i>
+										{% else %}
+
 										<!-- أيقونة استفهام كبديل افتراضي -->
 									{% endif %}
 								{% endif %}
