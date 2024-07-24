@@ -1,36 +1,32 @@
 <footer class="store-footer pt-5 footer-background bg-[#f0f0f0]">
 	<div class="container">
 		<div
-			class="flex flex-wrap lg:flex-nowrap gap-2">
+			class="flex flex-col lg:flex-row gap-4 lg:gap-2">
 			<!-- Logo and description -->
-			<div class="flex flex-col items-center lg:items-start me-10">
-
-				<img class="store-logo ml-10" src="{{ store.logo }}" alt="{{ store.name }} logo">
-
-
+			<div class="flex flex-col items-center lg:items-start mb-4 lg:mb-0 lg:me-10">
+				<img class="store-logo" src="{{ store.logo }}" alt="{{ store.name }} logo">
 			</div>
 
 			<!-- Store description -->
-			<div class="flex flex-col ml-10 lg:w-1/4">
-				<p class="text-base lg:text-lg text-justify lg:text-right">
+			<div class="flex flex-col  lg:w-1/4 mb-4 lg:mb-0">
+				<p class="text-base lg:text-lg text-center lg:text-right">
 					<span class="custom-color">مجوهرات ماس</span>
 					تجسيد للجمال الأزلي والأناقة الفريدة، كل قطعة مصممة بحرفية فائقة، تحمل طابع الأصالة والفخامة، متخصصون في قطع الذهب والألماس منذ عام 1403 هجري.
 				</p>
 			</div>
 
 			<!-- Location and social media -->
-			<div class="flex flex-col items-center lg:items-start lg:w-1/4">
-				<p class="text-base lg:text-lg text-center lg:text-left">السعودية الرياض
-					<br></p>
-				<p class="text-sm lg:text-sm text-center lg:text-left">الفرع الأول: أسواق طيبة (طريق الملك فهد)<br></p>
-				<p class="text-sm lg:text-sm text-center lg:text-left">الفرع الثاني: أسواق المجد (مخرج 10)<br></p>
+			<div class="flex flex-col items-center mr-15 lg:items-start lg:w-1/4 mb-4 lg:mb-0">
+				<p class="text-base lg:text-lg text-center lg:text-left">السعودية الرياض</p>
+				<p class="text-sm lg:text-sm text-center lg:text-left">الفرع الأول: أسواق طيبة (طريق الملك فهد)</p>
+				<p class="text-sm lg:text-sm text-center lg:text-left">الفرع الثاني: أسواق المجد (مخرج 10)</p>
 
-				<salla-social class="custom-color"></salla-social>
+				<salla-social class="custom-color mt-2"></salla-social>
 			</div>
 		</div>
 
 		<!-- Footer bottom row -->
-		<div class="text-center mt-5 ">
+		<div class="text-center mt-5">
 			<p class="text-sm lg:text-base">
 				&copy;
 				<span class="custom-color">{{ "now"|date("Y") }}</span>

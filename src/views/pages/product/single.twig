@@ -167,102 +167,100 @@
 {% extends "layouts.master" %}
 {% block content %}
     <div class="container py-5">
-        <h1 class="font-slim text-4xl md:text-7xl rtl:pl-3 ltr:pr-3" id="page-main-title">{{ page.title|raw }}</h1>
-        <custom-main-menu class="text-xl md:text-2xl"></custom-main-menu>
-        <div class="flex flex-col gap-4 items-center md:flex-row" id="product-{{ product.id }}" style="justify-content: center;">
+        <h1 class="font-slim text-4xl sm:text-7xl rtl:pl-3 ltr:pr-3" id="page-main-title">{{ page.title|raw }}</h1>
+        <custom-main-menu class="text-xl sm:text-2xl"></custom-main-menu>
+		<div class="flex flex-col gap-4 items-center sm:items-start sm:flex-row" id="product-{{ product.id }}" style="justify-content: center;">
 
-            <div class="main-content w-full md:w-1/2 md:pb-16 flex-1 px-4" style="max-width: 100%;">
+    <div class="main-content w-full sm:w-1/2 sm:overflow-hidden sm:pb-16 flex-1 max-w-[90vw] sm:max-w-[35vw]">
 
-                {% hook 'product:single.description.start' %}
+        {% hook 'product:single.description.start' %}
 
-                <div class="text-center mb-6">
-                    <h1 class="text-2xl md:text-5xl leading-10 font-slim inline-block">{{ product.name }}</h1>
-                    <span class="inline-block mx-4" style="border-bottom: 1px solid #a5804a; width: 50px;"></span>
-                    <h2 class="text-xl md:text-2xl font-slim inline-block">
-                        {{ product.starting_price ? product.starting_price|money : product.price|money }}
-                    </h2>
-                </div>
-
-                <div class="product__description text-xl md:text-2xl p-3 px-4 md:px-5 sm:p-1 leading-7 mb-3 text-center" style="max-width: 100%; margin: 0 auto;">
-                    {% set product_desc = product.description|replace({"&nbsp;":"\n"}) %}
-                    {% if product.has_read_more %}
-                        <article class="article article--main relative leading-8 overflow-hidden transition-all max-h-0 duration-300 py-4" id="more-content" style="max-height:5.25rem">
-                            {{ product_desc|raw }}
-                        </article>
-
-                        {# Read More Button #}
-                        <a id="btn-show-more" class="link--primary inline-block mt-2 cursor-pointer">
-                            {{ trans('pages.products.read_more') }}
-                        </a>
-                    {% else %}
-                        <article class="article--main pb-1">
-                            {{ product_desc|raw }}
-                        </article>
-                    {% endif %}
-                </div>
-
-                {% hook 'product:single.description' %}
-
-                <form class="form product-form text-center" enctype="multipart/form-data" method="post" onsubmit="return salla.form.onSubmit('cart.addItem', event)" style="max-width: 100%; margin: 0 auto;">
-                    <input type="hidden" name="id" value="{{ product.id }}">
-
-                    {% hook 'product:single.form.start' %}
-
-                    {% include 'pages.partials.product.options' %}
-                    {% hook 'product:single.form.end' %}
-                    <section class="text-center">
-                        {# Add to cart #}
-                        <div class="flex justify-center">
-                            <button class="custom-product-card-add-to-cart-btn" aria-label="Add to wishlist" onclick="salla.wishlist.toggle(${this.product.id})">
-                                أضف الى السلة
-                                <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>
-                            </button>
-                        </div>
-                    </section>
-                </form>
-
-                {% hook 'product:single.description.end' %}
-
-            </div>
-
-            <div class="sidebar w-full md:w-1/2 pb-8 md:pb-16 overflow-hidden flex-1 px-4">
-                <salla-slider id="details-slider-{{ product.id }}" type="thumbs" loop="true" auto-play pagination show-controls="false" style="height: 45vh;">
-                    {% if product.promotion_title %}
-                        <div class="promotion-title">{{ product.promotion_title }}</div>
-                    {% endif %}
-
-                    <div slot="items" class="flex flex-wrap">
-                        {% for image in product.images %}
-                            {% if image.three_d_image_url %}
-                                <model-viewer style="height: 50%; width: 100%;" class="swiper-slide model-entry w-full h-full" loading="eager" camera-controls touch-action="pan-y" auto-rotate poster="{{ image.url }}" src="{{ image.three_d_image_url }}" shadow-intensity="1" alt="{{ image.alt }}"></model-viewer>
-                            {% else %}
-                                <a data-fslightbox="product_{{ product.id }}" data-img-id="{{ image.id }}" data-slid-index="{{ loop.index-1 }}" {% if image.video_url %} data-video-src="{{ image.video_url }}" {% endif %} data-caption="{{ image.alt }}" data-infinite="false" data-type="{{ image.video_url?'youtube':'image' }}" href="{{ image.video_url?image.video_url:image.url }}" aria-label="{{ product.name }}" class="swiper-slide magnify-wrapper homeslider__slide {{ image.video_url?'video-entry':'' }} w-full h-full">
-                                    {% if loop.first %}
-                                        <img id="{{image.id}}" fetchpriority="high" loading="eager" src="{{ image.url }}" alt="{{ image.alt }}" class="h-full object-cover w-full">
-                                    {% else %}
-                                        <img id="{{image.id}}" src="{{ 'images/s-empty.png' | cdn }}" data-src="{{ image.url }}" alt="{{ image.alt }}" class="lazy h-full object-cover w-full">
-                                    {% endif %}
-                                </a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </salla-slider>
-            </div>
+        <div class="text-center">
+            <h1 class="text-xl sm:text-5xl leading-10 font-slim inline-block">{{ product.name }}</h1>
+            <span class="inline-block mx-4 border-b border-[#a5804a] w-[110px]"></span>
+            <h2 class="text-2xl font-slim inline-block">
+                {{ product.starting_price ? product.starting_price|money : product.price|money }}
+            </h2>
         </div>
 
-        <div class="container my-10">
-            <div class="text-right px-4">
-                <h2 class="text-xl md:text-2xl mb-2" style="display: inline-block; margin-left: 10px;">منتجات قد تعجبك</h2>
-                <div style="width: 20vw; max-width: 200px; height: 1px; background-color: #a5804a; display: inline-block;"></div>
-            </div>
+        <div class="product__description text-xl sm:text-2xl p-2 px-5 sm:p-1 leading-7 mb-3 text-center max-w-[90vw] sm:max-w-[35vw] mx-auto">
+            {% set product_desc = product.description|replace({"&nbsp;":"\n"}) %}
+            {% if product.has_read_more %}
+                <article class="article article--main relative leading-8 overflow-hidden transition-all duration-300 py-4 max-h-[5.25rem]" id="more-content">
+                    {{ product_desc|raw }}
+                </article>
 
-            <salla-products-slider
-                source="related"
-                product-card-component="custom-product-card"
-                source-value="{{product.id}}"
-                class="custom-slider">
-            </salla-products-slider>
+                {# Read More Button #}
+                <a id="btn-show-more" class="link--primary inline-block mt-2 cursor-pointer">
+                    {{ trans('pages.products.read_more') }}
+                </a>
+            {% else %}
+                <article class="article--main pb-1">
+                    {{ product_desc|raw }}
+                </article>
+            {% endif %}
+        </div>
+
+        {% hook 'product:single.description' %}
+
+        <form class="form product-form text-center max-w-[90vw] sm:max-w-[35vw] mx-auto" enctype="multipart/form-data" method="post" onsubmit="return salla.form.onSubmit('cart.addItem', event)">
+            <input type="hidden" name="id" value="{{ product.id }}">
+
+            {% hook 'product:single.form.start' %}
+
+            {% include 'pages.partials.product.options' %}
+
+            {% hook 'product:single.form.end' %}
+            <section class="text-center mt-10">
+                {# Add to cart #}
+                <div class="flex justify-center">
+                    <button class="custom-product-card-add-to-cart-btn" aria-label="Add to wishlist" onclick="salla.wishlist.toggle(${this.product.id})">
+                        أضف الى السلة
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                    </button>
+                </div>
+            </section>
+        </form>
+
+        {% hook 'product:single.description.end' %}
+
+    </div>
+
+    <div class="sidebar w-full sm:w-1/2 pb-8 sm:pb-16 overflow-hidden flex-1 max-w-[90vw] sm:max-w-[35vw]">
+        <salla-slider id="details-slider-{{ product.id }}" type="thumbs" loop="true" auto-play pagination show-controls="false" style="height: 45vh;">
+            {% if product.promotion_title %}
+                <div class="promotion-title">{{ product.promotion_title }}</div>
+            {% endif %}
+
+            <div slot="items" class="flex flex-wrap">
+                {% for image in product.images %}
+                    {% if image.three_d_image_url %}
+                        <model-viewer style="height: 50%; width: 50%;" class="swiper-slide model-entry w-full h-full" loading="eager" camera-controls touch-action="pan-y" auto-rotate poster="{{ image.url }}" src="{{ image.three_d_image_url }}" shadow-intensity="1" alt="{{ image.alt }}"></model-viewer>
+                    {% else %}
+                        <a data-fslightbox="product_{{ product.id }}" data-img-id="{{ image.id }}" data-slid-index="{{ loop.index-1 }}" {% if image.video_url %} data-video-src="{{ image.video_url }}" {% endif %} data-caption="{{ image.alt }}" data-infinite="false" data-type="{{ image.video_url?'youtube':'image' }}" href="{{ image.video_url?image.video_url:image.url }}" aria-label="{{ product.name }}" class="swiper-slide magnify-wrapper homeslider__slide {{ image.video_url?'video-entry':'' }} w-full h-full">
+                            {% if loop.first %}
+                                <img id="{{image.id}}" fetchpriority="high" loading="eager" src="{{ image.url }}" alt="{{ image.alt }}" class="h-full object-cover w-full">
+                            {% else %}
+                                <img id="{{image.id}}" src="{{ 'images/s-empty.png' | cdn }}" data-src="{{ image.url }}" alt="{{ image.alt }}" class="lazy h-full object-cover w-full">
+                            {% endif %}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </salla-slider>
+    </div>
+</div>
+
+
+        <div class="container p-4 sm:p-10">
+			<div class="container my-10 text-right" style="margin-right: 10px;">
+				<h2 class="text-xl sm:text-2xl mb-2" style="display: inline-block; margin-left: 10px;">منتجات قد تعجبك</h2>
+				<div class="w-[20vw] sm:w-[10vw] h-1 bg-[#a5804a] inline-block"></div>
+			</div>
+
+            <salla-products-slider source="related" product-card-component="custom-product-card" source-value="{{product.id}}" display-all-url></salla-products-slider>
         </div>
     </div>
     {# Similar Products Area #}
 {% endblock %}
+
