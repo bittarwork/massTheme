@@ -8,48 +8,33 @@
 				{% for cat in component.categories %}
 					<div class="flex flex-col items-center">
 						<a href="{{ cat.url }}" class="relative w-24 h-24 bg-custom rounded-full flex items-center justify-center {{ cat.image ? '' : 'has-placeholder' }} hover:bg-white hover:shadow-custom transition-colors duration-300">
-							{% if cat.image %}
-								<img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full" width="64" height="64" alt="{{ cat.name }}"/>
-							{% else %}
-								{% if cat.name == 'عقود' %}
-									<div class="neck-background-svg"></div>
-								{% elseif cat.name == 'أطفال' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M12 2a6 6 0 00-6 6v1a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2v-1a6 6 0 00-6-6zm0 2a4 4 0 014 4v1a2 2 0 00-2 2v5H8v-5a2 2 0 00-2-2v-1a4 4 0 014-4z"/>
-									</svg>
-								{% elseif cat.name == 'أطقم' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M12 2L8.6 4.8 4 9h16l-4.6-4.2L12 2zm0 4l4 4H8l4-4zm-5.4 9l-.6 1.6 4.4 1.6 4.4-1.6-.6-1.6h-8z"/>
-									</svg>
-								{% elseif cat.name == 'كفوف وخلاخل' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M4 6h2v2H4V6zm0 4h2v2H4v-2zm0 4h2v2H4v-2zm4-8h2v2H8V6zm0 4h2v2H8v-2zm0 4h2v2H8v-2zm4-8h2v2h-2V6zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-8h2v2h-2V6zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
-									</svg>
-								{% elseif cat.name == 'خواتم توينز' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M12 2a6 6 0 00-6 6v1a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2v-1a6 6 0 00-6-6zm0 2a4 4 0 014 4v1a2 2 0 00-2 2v5H8v-5a2 2 0 00-2-2v-1a4 4 0 014-4z"/>
-									</svg>
-								{% elseif cat.name == 'خواتم' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M12 2a6 6 0 00-6 6v1a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2v-1a6 6 0 00-6-6zm0 2a4 4 0 014 4v1a2 2 0 00-2 2v5H8v-5a2 2 0 00-2-2v-1a4 4 0 014-4z"/>
-									</svg>
-								{% elseif cat.name == 'حلق' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M14 2h-4v2h4V2zm4 6H6v2h12V8zm2 6H4v2h16v-2zm0 4H4v2h16v-2z"/>
-									</svg>
-								{% elseif cat.name == 'أساور' %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M12 4a5.978 5.978 0 00-5.8 4h-1.2c-.6 0-1.1.5-1.1 1.1v11.8c0 .6.5 1.1 1.1 1.1h1.2c.4 2.3 2.3 4.1 4.8 4.1s4.4-1.8 4.8-4.1h1.2c.6 0 1.1-.5 1.1-1.1v-11.8c0-.6-.5-1.1-1.1-1.1h-1.2A5.978 5.978 0 0012 4zm0 2a4 4 0 014 4v11a4 4 0 01-8 0V10a4 4 0 014-4z"/>
-									</svg>
+							<div class="flex items-center justify-center w-full h-full">
+								{% if cat.image %}
+									<img src="{{ cat.image ? cat.image : 'images/placeholder.png' | asset }}" class="w-16 h-16 object-cover rounded-full" width="64" height="64" alt="{{ cat.name }}"/>
 								{% else %}
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon w-16 h-16" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-										<path d="M12 2l1.45 4.77L18 8.5l-3.79 3.24L15 16l-4.5-2.5L6 16l1.79-4.26L4 8.5l4.55-1.73L12 2z"/>
-									</svg>
+									{% if cat.name == "عقود" %}
+										<i class="fa fa-gem text-2xl"></i>
+									{% elif cat.name == "أطفال" %}
+										<i class="fa fa-child text-2xl"></i>
+									{% elif cat.name == "أطقم" %}
+										<i class="fa fa-box-open text-2xl"></i>
+									{% elif cat.name == "كفوف وخلاخل" %}
+										<i class="fa fa-link text-2xl"></i>
+									{% elif cat.name == "خواتم توينز" %}
+										<i class="fa fa-ring text-2xl"></i>
+									{% elif cat.name == "خواتم" %}
+										<i class="fa fa-circle text-2xl"></i>
+									{% elif cat.name == "حلق" %}
+										<i class="fa fa-circle-notch text-2xl"></i>
+									{% elif cat.name == "أساور" %}
+										<i class="fa fa-life-ring text-2xl"></i>
+										<!-- استخدام أيقونة مشابهة للأساور -->
+									{% endif %}
 								{% endif %}
-							{% endif %}
+							</div>
 							<div class="absolute w-20 h-20 border-2 border-white rounded-full hover:border-custom"></div>
 						</a>
-						<h2 class="text-center text-lg">{{ cat.name }}</h2>
+						<h2 class="text-center text-lg mt-2">{{ cat.name }}</h2>
 					</div>
 				{% endfor %}
 			{% endif %}
