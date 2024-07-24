@@ -46,13 +46,15 @@ class CustomProductCard extends HTMLElement {
         <style>
           .custom-product-card {
             background-color: #ffffff;
-            padding: 1vw 3vh;
+            padding: 1vw 1vh;
             color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             position: relative;
             transition: background-color 0.5s ease, transform 0.5s ease;
-            height: 40vh;
+            height: auto;
+            max-width: 100%;
+            margin: 1vh 0;
           }
           
           .custom-product-card:hover {
@@ -61,7 +63,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card h3 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 100;
             display: flex;
             justify-content: center;
@@ -83,7 +85,7 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card .product-price {
-            display: none; /* إخفاء السعر بشكل افتراضي */
+            display: none;
             color: #a5804a;
             transition: display 0.5s ease;
             margin: 0 0.4vw;
@@ -101,8 +103,8 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card:hover .product-price {
-            display: inline-block; /* عرض السعر عند hover */
-            font-size: 0.7em;
+            display: inline-block;
+            font-size: 0.8em;
           }
           
           .custom-product-card:hover .separator {
@@ -111,14 +113,14 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card-image {
-            height: 20vh;
+            height: 15vh;
             overflow: hidden;
           }
           
           .custom-product-card-image img {
             max-height: 100%;
             max-width: 100%;
-            object-fit: cover; /* ضبط حجم الصورة */
+            object-fit: cover;
           }
           
           .custom-product-card-content {
@@ -128,9 +130,10 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card-description {
-            font-size: 0.9em; /* تقليل حجم الخط للوصف */
+            font-size: 0.9em;
             text-align: right;
             font-weight: 100;
+            margin: 1vh 0;
           }
           
           .custom-product-card-add-to-cart-btn {
@@ -143,10 +146,11 @@ class CustomProductCard extends HTMLElement {
             transition: background-color 0.5s ease, color 0.5s ease;
             align-self: center;
             width: auto;
-            font-family:"etab" !important;
-            font-size:1em;
+            font-family: "etab" !important;
+            font-size: 1em;
             display: flex;
             align-items: center;
+            margin-top: 1vh;
           }
           
           .custom-product-card-add-to-cart-btn:hover {

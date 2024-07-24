@@ -79,7 +79,20 @@
 				background-size: cover !important;
 			}
 			footer {
-				background-color: #f0f0f0 !important;
+				position: relative; /* يتيح وضع العنصر الخلفي بشكل صحيح */
+				background-color: #f0f0f0; /* لون الخلفية للفوتر */
+			}
+
+			.footer-background {
+				position: absolute; /* جعل الخلفية تسبح فوق الفوتر */
+				left: 0; /* وضع الخلفية على اليسار */
+				top: 0; /* تبدأ من أعلى الفوتر */
+				background-color: #f0f0f0; /* نفس لون الخلفية للفوتر */
+				background-image: url('{{ 'images/9.svg' | asset }}');
+				background-position: left center;
+				background-repeat: no-repeat;
+				background-size: contain; /* لتغطية كامل المنطقة المحددة */
+				z-index: 1; /* تأكيد أن الخلفية تظهر فوق الفوتر */
 			}
 		</style>
 
@@ -161,15 +174,15 @@
 			}
 		</style>
 		 <script>
-																																																																																																																																											window.addEventListener("load", () => {
-																																																																																																																																											const loader = document.querySelector(".loader-init");
-																																																																																																																																											loader.classList.add("loader-init--hidden");
-																																																																																																																																											loader.addEventListener("transitionend", () => {
-																																																																																																																																											if (!document.querySelector(".loader-init")) return;
-																																																																																																																																											document.body.removeChild(loader);
-																																																																																																																																											});
-																																																																																																																																											});
-																																																																																																																																											</script>
+																																																																																																																																																															window.addEventListener("load", () => {
+																																																																																																																																																															const loader = document.querySelector(".loader-init");
+																																																																																																																																																															loader.classList.add("loader-init--hidden");
+																																																																																																																																																															loader.addEventListener("transitionend", () => {
+																																																																																																																																																															if (!document.querySelector(".loader-init")) return;
+																																																																																																																																																															document.body.removeChild(loader);
+																																																																																																																																																															});
+																																																																																																																																																															});
+																																																																																																																																																															</script>
 
 		 <script defer data-cfasync="false" src="{{ 'product-card.js'|asset }}"></script>
 		 <script defer src="{{ 'main-menu.js'|asset }}"></script>{% block head_scripts %}
@@ -177,9 +190,9 @@
 
 
 		 <script data-cfasync="false">
-																																																																																																																																																																																																																																																								        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
-																																																																																																																																																																																																																																																								        window.imageZoom = "{{theme.settings.get('imageZoom')}}"
-																																																																																																																																																																																																																																																								    </script>
+																																																																																																																																																																																																																																																																												        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
+																																																																																																																																																																																																																																																																												        window.imageZoom = "{{theme.settings.get('imageZoom')}}"
+																																																																																																																																																																																																																																																																												    </script>
 
 		{% hook 'head:start' %}
 		{% hook head %}{% block styles %}
@@ -225,10 +238,10 @@
 
 </head>
 <body id="app" class=" back overflow-x-hidden font-etab {% hook 'body:classes' %}
-																																																																																																																											{{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
-																																																																																																																											{{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
-																																																																																																																											{{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
-																																																																																																																											">
+																																																																																																																																															{{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
+																																																																																																																																															{{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
+																																																																																																																																															{{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
+																																																																																																																																															">
 	<div class="loader-init"></div>
 	<noscript>
 		To get full functionality of this site you need to enable JavaScript. Here is how
