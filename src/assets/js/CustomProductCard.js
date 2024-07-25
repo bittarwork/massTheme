@@ -44,16 +44,9 @@ class CustomProductCard extends HTMLElement {
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-          :host {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-          }
-
           .custom-product-card {
             background-color: #ffffff;
-            padding: 1vw;
+            padding: 1vw 1vh;
             color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
@@ -62,16 +55,11 @@ class CustomProductCard extends HTMLElement {
             height: auto;
             max-width: 100%;
             margin: 1vh 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border-radius: 8px;
-            overflow: hidden;
           }
           
           .custom-product-card:hover {
             background-color: #f0f0f0;
-            transform: translateY(-0.5vh);
+            transform: translateY(-1vh);
           }
           
           .custom-product-card h3 {
@@ -81,7 +69,6 @@ class CustomProductCard extends HTMLElement {
             justify-content: center;
             align-items: center;
             transition: justify-content 0.5s ease;
-            margin: 1vh 0;
           }
           
           .custom-product-card h3 a {
@@ -102,7 +89,6 @@ class CustomProductCard extends HTMLElement {
             color: #a5804a;
             transition: display 0.5s ease;
             margin: 0 0.4vw;
-            font-size: 0.9em;
           }
           
           .custom-product-card .separator {
@@ -118,6 +104,7 @@ class CustomProductCard extends HTMLElement {
           
           .custom-product-card:hover .product-price {
             display: inline-block;
+            font-size: 0.8em;
           }
           
           .custom-product-card:hover .separator {
@@ -126,28 +113,20 @@ class CustomProductCard extends HTMLElement {
           }
           
           .custom-product-card-image {
-            height: auto;
-            max-height: 30vh;
+            height: 15vh;
             overflow: hidden;
-            border-bottom: 1px solid #eee;
           }
           
           .custom-product-card-image img {
-            width: 100%;
-            height: 100%;
+            max-height: 100%;
+            max-width: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
-          }
-
-          .custom-product-card:hover .custom-product-card-image img {
-            transform: scale(1.05);
           }
           
           .custom-product-card-content {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 1vh 0;
           }
           
           .custom-product-card-description {
@@ -162,41 +141,38 @@ class CustomProductCard extends HTMLElement {
             color: #fff;
             border: none;
             cursor: pointer;
-            font-size: 1em;
-            padding: 0.8vh 1vw;
+            font-size: 0.8em;
+            padding: 1vh 2vw;
             transition: background-color 0.5s ease, color 0.5s ease;
             align-self: center;
+            width: auto;
+            font-family: "etab" !important;
+            font-size: 1em;
             display: flex;
             align-items: center;
-            justify-content: center;
             margin-top: 1vh;
-            border-radius: 4px;
           }
           
           .custom-product-card-add-to-cart-btn:hover {
             background-color: transparent;
             color: #a5804a;
-            border: 1px solid #a5804a;
           }
           
           .custom-product-promotion-title {
             position: absolute;
-            top: 1vh;
-            left: 1vw;
+            top: 16px;
+            left: 16px;
             color: #a5804a;
             margin: 1vw 1vh;
             font-size: 1em;
             display: block;
             transition: display 0.5s ease;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 0.5vh 1vw;
-            border-radius: 4px;
           }
           
           .s-product-card-wishlist-btn {
             position: absolute;
-            top: 1vh;
-            right: 1vw;
+            top: 16px;
+            right: 16px;
             cursor: pointer;
             border: none;
             background: transparent;
@@ -214,9 +190,6 @@ class CustomProductCard extends HTMLElement {
       </head>
       <div class="custom-product-card">
         <div class="custom-product-promotion-title">${this.product.promotion_title || ''}</div>
-        <button class="s-product-card-wishlist-btn">
-          <i class="sicon-heart"></i>
-        </button>
         <div class="custom-product-card-image">
           <a href="${this.product.url}">
             <img src="${this.product.image?.url || ''}" alt="${this.product.image?.alt || ''}" />
@@ -230,12 +203,12 @@ class CustomProductCard extends HTMLElement {
           </h3>
           <p class="custom-product-card-description">${this.product.description || ''}</p>
           <button class="custom-product-card-add-to-cart-btn" aria-label="Add to wishlist" onclick="salla.wishlist.toggle(${this.product.id})">
-            أضف الى السلة
-            <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>
+          أضف الى السلة
+          <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>
           </button>
         </div>
-      </div>
-    `;
+      </div>`
+      ;
   }
 }
 
