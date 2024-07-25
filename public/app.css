@@ -621,6 +621,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .max-w-xs{max-width:20rem}
 .flex-1{flex:1 1 0%}
 .flex-none{flex:none}
+.flex-shrink{flex-shrink:1}
 .shrink-0{flex-shrink:0}
 .flex-grow{flex-grow:1}
 .table-fixed{table-layout:fixed}
