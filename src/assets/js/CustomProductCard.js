@@ -46,15 +46,16 @@ class CustomProductCard extends HTMLElement {
         <style>
           .custom-product-card {
             background-color: #ffffff;
-            padding: 1vw 1vh;
+            padding: 1vw;
             color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             position: relative;
             transition: background-color 0.5s ease, transform 0.5s ease;
-            height: auto;
-            max-width: 100%;
-            margin: 1vh 0;
+            width: 100%; /* Adjust the width to fit within its container */
+            max-width: 300px; /* Set a maximum width to ensure cards do not become too wide */
+            margin: 1vh auto; /* Center the cards horizontally within their container */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
           }
           
           .custom-product-card:hover {
@@ -127,6 +128,7 @@ class CustomProductCard extends HTMLElement {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%; /* Ensure the content fills the card height */
           }
           
           .custom-product-card-description {
@@ -165,7 +167,7 @@ class CustomProductCard extends HTMLElement {
             color: #a5804a;
             margin: 1vw 1vh;
             font-size: 1em;
-            display: block;
+            display: ${promotionTitleDisplay};
             transition: display 0.5s ease;
           }
           

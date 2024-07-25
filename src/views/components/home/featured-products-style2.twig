@@ -11,11 +11,8 @@
 		<div class="px-5">
 			{% for section in items %}
 				<div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }}">
-					<div
-						class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-						{# <custom-product-card product="{{ product|json_encode }}"></custom-product-card> #}
-						<salla-products-list source="selected" limit="4" product-card-component="custom-product-card" source-value="[{{ section.products|map((product) => product.id)|join(',') }}]" {{is_vertical ? '' : 'horizontal-cards'}}></salla-products-list>
-
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+						<salla-products-list source="selected" limit="4" product-card-component="custom-product-card" source-value="[{{ section.products|map((product) => product.id)|join(',') }}]" horizontal-cards="true"></salla-products-list>
 					</div>
 				</div>
 			{% endfor %}
