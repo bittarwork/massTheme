@@ -38,8 +38,6 @@ class CustomProductCard extends HTMLElement {
   }
 
   render() {
-    const promotionTitleDisplay = this.product.promotion_title ? 'block' : 'none';
-
     this.shadowRoot.innerHTML = `
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -55,6 +53,8 @@ class CustomProductCard extends HTMLElement {
             height: auto;
             max-width: 100%;
             margin: 1vh 0;
+            display: flex;
+            align-items: center;
           }
           
           .custom-product-card:hover {
@@ -115,6 +115,8 @@ class CustomProductCard extends HTMLElement {
           .custom-product-card-image {
             height: 15vh;
             overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
           }
           
           .custom-product-card-image img {
@@ -127,6 +129,8 @@ class CustomProductCard extends HTMLElement {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            flex-grow: 1;
+            margin-left: 20px;
           }
           
           .custom-product-card-description {
@@ -160,13 +164,13 @@ class CustomProductCard extends HTMLElement {
           
           .custom-product-promotion-title {
             position: absolute;
-            top: 16px;
-            left: 16px;
+            top: 50%;
+            left: -100px; /* Adjust based on the width of the title */
+            transform: translateY(-50%) rotate(-90deg);
             color: #a5804a;
-            margin: 1vw 1vh;
-            font-size: 1em;
-            display: block;
-            transition: display 0.5s ease;
+            font-size: 1.2em;
+            white-space: nowrap;
+            text-align: center;
           }
           
           .s-product-card-wishlist-btn {
@@ -189,7 +193,6 @@ class CustomProductCard extends HTMLElement {
         </style>
       </head>
       <div class="custom-product-card">
-        <div class="custom-product-promotion-title">${this.product.promotion_title || ''}</div>
         <div class="custom-product-card-image">
           <a href="${this.product.url}">
             <img src="${this.product.image?.url || ''}" alt="${this.product.image?.alt || ''}" />
@@ -207,6 +210,7 @@ class CustomProductCard extends HTMLElement {
           <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i>
           </button>
         </div>
+        <div class="custom-product-promotion-title">${this.product.promotion_title || ''}</div>
       </div>
     `;
   }
