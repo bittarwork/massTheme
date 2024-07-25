@@ -47,14 +47,13 @@ class CustomProductCard extends HTMLElement {
             padding: 1vw 1vh;
             color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
             position: relative;
-            transition: background-color 0.5s ease, transform 0.5s ease;
-            height: auto;
-            max-width: 100%;
-            margin: 1vh 0;
             display: flex;
             align-items: center;
+            margin: 1vh 0;
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
           }
           
           .custom-product-card:hover {
@@ -115,8 +114,8 @@ class CustomProductCard extends HTMLElement {
           .custom-product-card-image {
             height: 15vh;
             overflow: hidden;
-            position: relative;
             flex-shrink: 0;
+            position: relative;
           }
           
           .custom-product-card-image img {
@@ -165,12 +164,14 @@ class CustomProductCard extends HTMLElement {
           .custom-product-promotion-title {
             position: absolute;
             top: 50%;
-            left: -100px; /* Adjust based on the width of the title */
+            left: -60px; /* Adjust based on the width of the title */
             transform: translateY(-50%) rotate(-90deg);
+            transform-origin: top left;
             color: #a5804a;
             font-size: 1.2em;
             white-space: nowrap;
             text-align: center;
+            height: auto;
           }
           
           .s-product-card-wishlist-btn {
