@@ -882,7 +882,35 @@
             "title": "بانر  عريض لعرض انواع التصنيفات",
             "icon": "sicon-arrow-expand",
             "path": "home.enhanced-fixed-banner",
-            "fields": []
+            "fields": [
+                {
+                    "id": "background_image_for_enhnaced_fixed_banner",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة الخلفية",
+                    "description": "قم بوضع الصورة التي سوف تظهر التصنيفات فوقها",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": "الصورة التي سوف تظهر في الخلفية",
+                    "required": true
+                },
+                {
+                    "id": "parent_cat_for_enhanced_fixed_banner",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نوع التصنيف العام الذي تريده",
+                    "description": "قم بوضع اسم التصنيف الاب الذي تريد ان تظهر تفريعاته اسفله",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "الذهب",
+                    "multilanguage": false,
+                    "required": true,
+                    "minLength": 6,
+                    "maxLength": 30
+                }
+            ]
         }
     ],
     "support_url": "https://cptart.co",
