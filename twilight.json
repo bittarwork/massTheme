@@ -909,6 +909,22 @@
                     "required": true,
                     "minLength": 6,
                     "maxLength": 30
+                },
+                {
+                    "id": "cat_collection_for_enhanced_fixed_banner",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "حدد التصنيفات الفرعية التي سوف تظهر عند تمرير المؤشر",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [],
+                    "source": "Categories",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": false,
+                    "value": []
                 }
             ]
         }
