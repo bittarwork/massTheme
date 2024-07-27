@@ -775,6 +775,21 @@
                     "maxLength": "45"
                 },
                 {
+                    "id": "aboutus_subtitle_golden",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان الفرعي",
+                    "description": "سوف يظهر ما تكتبه هنا باللون الذهبي...",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "اختيارك الافضل..",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
                     "id": "aboutus_paragraph",
                     "type": "string",
                     "format": "text",
