@@ -827,6 +827,21 @@
                     "required": false,
                     "minLength": 6,
                     "maxLength": "1000"
+                },
+                {
+                    "id": "aboutus_url_for_page",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "رابط صفخة \"من نحن\"",
+                    "description": "قم بوضع رابط الصفحة التي تريد الذهاب اليها هنا",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": "500",
+                    "maxLength": "1000"
                 }
             ]
         },
