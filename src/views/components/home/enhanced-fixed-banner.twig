@@ -1,0 +1,15 @@
+<section class="">
+	<h1 class="larg_heading font-slim text-center">منتجاتنا</h1>
+	<div class="relative overflow-hidden group">
+
+		<img class="w-full h-full object-cover more_than_half_hieght" src="{{ component.background_image_for_enhnaced_fixed_banner }}" alt="fixxed banner background"/>
+		<div class="absolute bottom-0 right-0 text-white p-4">
+			<p class="overlay-larg">{{ component.parent_cat_for_enhanced_fixed_banner }}</p>
+		</div>
+		<div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 custom-mask">
+			{% for cat in component.cat_collection_for_enhanced_fixed_banner %}
+				<a href="#" class="text-black text-7xl hover:text-[#a5804a] hover:text-9xl transition-all duration-200">{{ cat }}</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
