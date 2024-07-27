@@ -876,6 +876,13 @@
                     "required": false
                 }
             ]
+        },
+        {
+            "key": "f9ed6c74-f5b9-431d-9ffb-43100bd57e1c",
+            "title": "بانر  عريض لعرض انواع التصنيفات",
+            "icon": "sicon-arrow-expand",
+            "path": "home.enhanced-fixed-banner",
+            "fields": []
         }
     ],
     "support_url": "https://cptart.co",
