@@ -790,30 +790,6 @@
                     "maxLength": "150"
                 },
                 {
-                    "id": "aboutus_image_one",
-                    "type": "string",
-                    "format": "image",
-                    "label": "الصورة الاساسية",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": false
-                },
-                {
-                    "id": "aboutus_image_two",
-                    "type": "string",
-                    "format": "image",
-                    "label": "الصورة البديلة",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": false
-                },
-                {
                     "id": "video_url_aboutus_new",
                     "type": "string",
                     "format": "url",
