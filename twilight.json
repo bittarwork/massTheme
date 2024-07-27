@@ -739,53 +739,6 @@
             ]
         },
         {
-            "key": "86f5960b-6bcd-4331-9d69-f7a903b9ee71",
-            "title": "testimonials",
-            "icon": "sicon-store",
-            "path": "home.testimonials-enhanced",
-            "fields": [
-                {
-                    "id": "testi_coliction",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "Collection",
-                    "description": null,
-                    "labelHTML": null,
-                    "item_label": "التعليقات",
-                    "icon": "sicon-list-add",
-                    "fields": [
-                        {
-                            "id": "testi_coliction.testi_image",
-                            "type": "string",
-                            "format": "image",
-                            "label": "صورة التعليق",
-                            "description": null,
-                            "labelHTML": null,
-                            "placeholder": "e.g. https://hostname.com/image.png",
-                            "icon": "sicon-image",
-                            "value": null,
-                            "required": false
-                        }
-                    ],
-                    "value": [],
-                    "minLength": 1,
-                    "maxLength": "4"
-                },
-                {
-                    "id": "background_image_bottom_right",
-                    "type": "string",
-                    "format": "image",
-                    "label": "صورة الخلفية على اليمين والاسفل",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": false
-                }
-            ]
-        },
-        {
             "key": "f9ed6c74-f5b9-431d-9ffb-43100bd57e1c",
             "title": "بانر  عريض لعرض انواع التصنيفات",
             "icon": "sicon-arrow-expand",
