@@ -95,9 +95,12 @@
 				<div class="text-center">
 					<h1 class="text-7xl sm:text-4xl leading-10 font-slim inline-block">{{ product.name }}</h1>
 					<span class="inline-block mx-4 border-b border-[#a5804a] w-[110px]"></span>
-					<h2 class="text-2xl font-slim inline-block">
-						{{ product.starting_price ? product.starting_price|money : product.price|money }}
-					</h2>
+					{# <h2 class="text-2xl font-slim inline-block">
+																{{ product.starting_price ? product.starting_price|money : product.price|money }}
+															</h2> #}
+					{% if product.promotion_title %}
+						<div class="text-2xl font-slim inline-block">{{ product.promotion_title }}</div>
+					{% endif %}
 				</div>
 
 				<div class="product__description text-xl sm:text-2xl p-2 px-5 sm:p-1 leading-7 mb-3 text-center max-w-[90vw] sm:max-w-[35vw] mx-auto">
@@ -146,10 +149,6 @@
 
 			<div class="sidebar sm:w-1/2 pb-8 sm:pb-16 overflow-hidden flex-1 max-w-[90vw] sm:max-w-[35vw]">
 				<salla-slider id="details-slider-{{ product.id }}" type="thumbs" loop="true" auto-play pagination show-controls="false" style="height: 45vh;">
-					{% if product.promotion_title %}
-						<div class="promotion-title">{{ product.promotion_title }}</div>
-					{% endif %}
-
 					<div slot="items" class="flex flex-wrap">
 						{% for image in product.images %}
 							{% if image.three_d_image_url %}
