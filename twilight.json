@@ -258,32 +258,6 @@
             "path": "home.main-links",
             "fields": [
                 {
-                    "type": "static",
-                    "format": "description",
-                    "id": "with-bg",
-                    "value": "<div style='padding-top:10px;margin-bottom:30px;border:1px solid #ebebeb;border-radius:5px;text-align:center;overflow:hidden'><h6 style='margin-bottom:10px'>معاينة العنصر</h6><img src='https://cdn.salla.network/images/themes/raed/main-links-with-bg.jpg?v=1.1'></div>",
-                    "conditions": [
-                        {
-                            "id": "merge_with_top_component",
-                            "operation": "=",
-                            "value": true
-                        }
-                    ]
-                },
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "without-bg",
-                    "value": "<div style='padding-top:10px;margin-bottom:30px;border:1px solid #ebebeb;border-radius:5px;text-align:center;overflow:hidden'><h6 style='margin-bottom:10px'>معاينة العنصر</h6><img src='https://cdn.salla.network/images/themes/raed/main-links.png?v=1.1'></div>",
-                    "conditions": [
-                        {
-                            "id": "merge_with_top_component",
-                            "operation": "=",
-                            "value": false
-                        }
-                    ]
-                },
-                {
                     "type": "string",
                     "icon": "sicon-format-text-alt",
                     "label": "العنوان",
@@ -298,73 +272,13 @@
                     "maxLength": 100
                 },
                 {
-                    "type": "boolean",
-                    "icon": "sicon-toggle-off",
-                    "label": "دمج مع العنصر السابق",
-                    "description": null,
-                    "id": "merge_with_top_component",
-                    "format": "switch",
-                    "required": false,
-                    "value": false,
-                    "selected": false
-                },
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "static-desc",
-                    "value": "<small style='margin: -36px 0 30px;display: block;'>* إزاحة كامل العنصر ومحتوياته مع العنصر السابق، وجعلهما يظهران كعنصر واحد متناسق، يكون ذا فائدة في حالة كان العنصر السابق هو (صور متحركة محسنة). </small>"
-                },
-                {
-                    "type": "boolean",
-                    "icon": "sicon-toggle-off",
-                    "label": "عرض أسهم التحرك",
-                    "description": "",
-                    "id": "show_controls",
-                    "format": "switch",
-                    "required": false,
-                    "value": true,
-                    "selected": true
-                },
-                {
-                    "type": "boolean",
-                    "icon": "sicon-toggle-off",
-                    "label": "عرض روابط التصنيفات",
-                    "description": "يمكنك تحديد التصنيفات بدل العناصر الخاصة، مع امكانية عرض صورة التصنيف مع العنصر",
-                    "id": "show_cats",
-                    "format": "switch",
-                    "required": false,
-                    "value": false,
-                    "selected": false
-                },
-                {
-                    "id": "categories",
-                    "type": "items",
-                    "format": "dropdown-list",
-                    "label": "حدد التصنيفات",
-                    "labelHTML": null,
-                    "icon": "sicon-keyboard_arrow_down",
-                    "selected": [],
-                    "options": [],
-                    "source": "categories",
-                    "multichoice": true,
-                    "searchable": true,
-                    "required": false,
-                    "conditions": [
-                        {
-                            "id": "show_cats",
-                            "operation": "=",
-                            "value": true
-                        }
-                    ]
-                },
-                {
                     "id": "links",
                     "type": "collection",
                     "format": "collection",
                     "required": true,
-                    "minLength": 3,
+                    "minLength": "1",
                     "maxLength": 100,
-                    "item_label": "رابط ",
+                    "item_label": "الرابط الذي تريد الوصول اليه",
                     "value": [
                         {
                             "links.icon": "sicon-store2",
@@ -381,35 +295,11 @@
                     ],
                     "fields": [
                         {
-                            "type": "string",
-                            "icon": "sicon-format-text-alt",
-                            "label": "عنوان الرابط",
-                            "id": "links.icon",
-                            "value": "sicon-store2",
-                            "required": false,
-                            "format": "icon",
-                            "class": "form--inline",
-                            "description": null
-                        },
-                        {
-                            "type": "string",
-                            "icon": "sicon-format-text-alt",
-                            "multilanguage": true,
-                            "id": "links.title",
-                            "value": null,
-                            "required": false,
-                            "format": "text",
-                            "description": null,
-                            "placeholder": "أدخل عنوان للرابط هنا...",
-                            "minLength": 2,
-                            "maxLength": 80
-                        },
-                        {
                             "type": "items",
                             "icon": "sicon-link",
                             "label": "الرابط",
                             "id": "links.url",
-                            "value": null,
+                            "value": [],
                             "description": null,
                             "required": false,
                             "format": "variable-list",
@@ -467,6 +357,18 @@
                                     "value": "custom"
                                 }
                             ]
+                        },
+                        {
+                            "id": "links.svg",
+                            "type": "string",
+                            "format": "code",
+                            "label": "الايقونة التي تريدها بشكل svg",
+                            "description": "قم بادخال الايقونة التي تريدها بشكل svg لكن بالابعاد الاتية : 16*16ْ بكسل ك اقصى حد",
+                            "labelHTML": null,
+                            "placeholder": "body { color: green; }",
+                            "icon": "sicon-browser-code",
+                            "value": "svg....",
+                            "required": false
                         }
                     ],
                     "conditions": [
