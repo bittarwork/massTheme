@@ -1,59 +1,26 @@
 {
     "name": {
-        "ar": "رائد",
-        "en": "Theme Raed"
+        "ar": "Theme muznnxcy",
+        "en": "Mas Theme"
     },
-    "repository": "https://github.com/SallaApp/theme-raed",
-    "author_email": "support@salla.sa",
+    "repository": "https://github.com/Conceptartco/masTheme",
+    "author_email": "naderst2020@gmail.com",
     "features": [
         "mega-menu",
         "fonts",
         "color",
-        "breadcrumb",
-        "unite-cards-height",
         "component-featured-products",
         "component-fixed-banner",
         "component-fixed-products",
         "component-products-slider",
         "component-photos-slider",
-        "component-parallax-background",
         "component-testimonials",
-        "component-square-photos",
         "component-store-features",
         "component-youtube",
         "menu-images",
         "filters"
     ],
     "settings": [
-        {
-            "type": "boolean",
-            "icon": "sicon-toggle-off",
-            "label": "وضع عمودي للمنتجات في مربع المنتجات الثابتة في الصفحة الرئيسية",
-            "description": null,
-            "id": "vertical_fixed_products",
-            "format": "switch",
-            "required": false,
-            "value": false,
-            "selected": false
-        },
-        {
-            "type": "boolean",
-            "id": "is_more_button_enabled",
-            "label": "عرض (زر الكل) في الصفحة الرئيسية",
-            "format": "switch"
-        },
-        {
-            "type": "static",
-            "id": "static-line1",
-            "format": "line"
-        },
-        {
-            "type": "static",
-            "format": "title",
-            "id": "static-label2",
-            "value": "خيارات أعلى الصفحة",
-            "variant": "h6"
-        },
         {
             "id": "header_is_sticky",
             "label": "تثبت القائمة الرئيسية أعلى الصفحة عند التمرير لأسفل",
@@ -513,51 +480,6 @@
             ]
         },
         {
-            "key": "25f6cf26-a53f-4954-9b32-739b311b32c7",
-            "title": "الماركات التجارية",
-            "icon": "sicon-award-ribbon",
-            "path": "home.brands",
-            "fields": [
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "with-bg",
-                    "value": "<div style='padding-top:10px;margin-bottom:30px;border:1px solid #ebebeb;border-radius:5px;text-align:center;overflow:hidden'><h6 style='margin-bottom:10px'>معاينة العنصر</h6><img src='https://cdn.salla.network/images/themes/raed/brands.jpg?v=1.1'></div>"
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "العنوان",
-                    "multilanguage": true,
-                    "id": "title",
-                    "required": false,
-                    "format": "text",
-                    "description": "",
-                    "placeholder": "أدخل العنوان هنا...",
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "value": {
-                        "ar": "تصفح من خلال العلامات التجارية",
-                        "en": "Browse All Brands"
-                    }
-                },
-                {
-                    "type": "items",
-                    "icon": "sicon-keyboard_arrow_down",
-                    "label": "الماركات التجارية",
-                    "id": "brands",
-                    "format": "dropdown-list",
-                    "description": "",
-                    "selected": [],
-                    "options": [],
-                    "required": true,
-                    "multichoice": true,
-                    "searchable": true,
-                    "source": "brands"
-                }
-            ]
-        },
-        {
             "key": "9a758d20-2ce4-4782-91fe-c04466464588",
             "title": "منتجات متحركة مع خلفية",
             "icon": "sicon-list-play",
@@ -832,13 +754,6 @@
             ]
         },
         {
-            "key": "97d6cdae-1ad2-453b-a043-72dc8a8a3c01",
-            "title": "home-banner-with-slider-background",
-            "icon": "sicon-arrow-swap",
-            "path": "home.home-banner-with-slider-background",
-            "fields": []
-        },
-        {
             "key": "eb97ad58-c191-4a42-958d-23db2ca4388b",
             "title": "about us",
             "icon": "sicon-store",
@@ -963,9 +878,9 @@
             ]
         }
     ],
-    "support_url": "https://salla.com/",
+    "support_url": "https://cptart.co",
     "description": {
-        "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
-        "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
+        "ar": null,
+        "en": null
     }
 }
