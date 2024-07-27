@@ -4555,10 +4555,9 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .sm\:pt-20{padding-top:5rem}
 .sm\:text-start{text-align:left}
 .sm\:text-2xl{font-size:1.5rem;line-height:2rem}
-.sm\:text-5xl{font-size:3rem;line-height:1}
-.sm\:text-7xl{font-size:4.5rem;line-height:1}
 .sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}
-.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+.sm\:text-5xl{font-size:3rem;line-height:1}
+.sm\:text-7xl{font-size:4.5rem;line-height:1}}
 @media (min-width: 768px){
 .md\:mb-0{margin-bottom:0px}
 .md\:mb-10{margin-bottom:2.5rem}
