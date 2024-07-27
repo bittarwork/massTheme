@@ -149,14 +149,14 @@ salla-slider {
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       font-size: 24px; /* حجم الأيقونة */
-      color: #27314b  ;
+      color: #000  ;
     }
 
     &-active {
       opacity: 1;
       
       &::before {
-        color: #27314b  ;
+        color: #000  ;
       }
     }
   }
