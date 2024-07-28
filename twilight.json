@@ -788,26 +788,6 @@
                     "value": []
                 }
             ]
-        },
-        {
-            "key": "b09d0da1-b964-4776-bf28-9e00a01b00b8",
-            "title": "اراء العملاء (محسنة)",
-            "icon": "sicon-align-center",
-            "path": "home.testimonials-enhanced",
-            "fields": [
-                {
-                    "id": "sort_alkhlfet",
-                    "type": "string",
-                    "format": "image",
-                    "label": "صورة الخلفية",
-                    "description": "الصورة الموجودة في الخلفية وعلى اليمين-الاسفل",
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": false
-                }
-            ]
         }
     ],
     "support_url": "https://cptart.co",
