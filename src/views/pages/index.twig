@@ -7,8 +7,14 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    {% component home %}
+	<div class="bg-gradient-to-r from-teal-400 to-blue-500 text-white text-center py-20">
+		<h1 class="text-5xl font-bold">{{ page.title }}</h1>
+		<p class="text-xl mt-4">{{ page.slug }}</p>
+	</div>
+	<div class="bg-white rounded-lg shadow-lg mt-10 mx-auto p-10 max-w-4xl">
+		{% component home %}
+	</div>
 {% endblock %}
 {% block scripts %}
-    <script defer src="{{ 'home.js' | asset }}"></script>
+	 <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}

@@ -6,16 +6,29 @@
 | page.slug         | string               |             |
 | orders[]          | Orders[] *Collection |             |
 #}
+
 {% extends "layouts.customer" %}
+
 {% block inner_content %}
-    {% if orders|length %}
-        {% hook 'customer:orders.index.items.start' %}
-          <salla-orders></salla-orders>
-        {% hook 'customer:orders.index.items.end' %}
-    {% else %}
-        <div class="no-content-placeholder">
-            <i class="sicon-packed-box icon"></i>
-            <p>{{ trans('pages.orders.non_orders') }}</p>
-        </div>
-    {% endif %}
+	<div class="order-history-page container mx-auto py-10 px-4 lg:px-8">
+		<h1 class="text-3xl font-semibold text-center mb-8">{{ page.title }}</h1>
+
+		{% if orders|length %}
+			{% hook 'customer:orders.index.items.start' %}
+
+			<div class="order-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<salla-orders class="col-span-1"></salla-orders>
+			</div>
+
+			{% hook 'customer:orders.index.items.end' %}
+		{% else %}
+			<div class="empty-orders flex flex-col items-center justify-center py-20">
+				<i class="sicon-packed-box icon text-6xl text-gray-400 mb-4"></i>
+				<p class="text-lg text-gray-600">{{ trans('pages.orders.non_orders') }}</p>
+				<a href="/shop" class="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+					{{ trans('pages.orders.browse_products') }}
+				</a>
+			</div>
+		{% endif %}
+	</div>
 {% endblock %}

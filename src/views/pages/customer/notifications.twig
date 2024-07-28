@@ -14,10 +14,67 @@
 | notifications[].date      | string                    |             |
 #}
 {% extends "layouts.customer" %}
+
 {% block inner_content %}
+	<div
+		class="container mx-auto px-4 mt-8">
+
+		<!-- Page Header -->
+		<header class="mb-6 text-center">
+			<h1 class="text-3xl font-bold text-gray-800">{{ page.title }}</h1>
+			<p class="text-sm text-gray-600 mt-1">ابقَ على اطلاع بأحدث الإشعارات الخاصة بك.</p>
+		</header>
+
+		{% if notifications.count > 0 %}
+
+			<!-- Notifications List -->
+			<div class="notifications-list bg-white shadow-md rounded-lg p-4">
+				<ul class="divide-y divide-gray-200">
+
+					{% for notification in notifications %}
+						<li class="p-4 flex items-center {{ notification.is_new ? 'bg-blue-50' : '' }} hover:bg-gray-50 transition">
+							<div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+								<i class="sicon-bell text-blue-500 text-2xl"></i>
+							</div>
+							<div class="flex-1">
+								<a href="{{ notification.url }}" class="block">
+									<h2 class="text-lg font-semibold text-gray-800 hover:underline">
+										{{ notification.title }}
+									</h2>
+									<p class="text-sm text-gray-600 mt-1">{{ notification.sub_title }}</p>
+									<time class="text-xs text-gray-400 mt-1">{{ notification.date }}</time>
+								</a>
+							</div>
+						</li>
+					{% endfor %}
+
+				</ul>
+			</div>
+
+			<!-- Pagination -->
+			{% if notifications.next_page %}
+				<div class="mt-6 text-center">
+					<a href="{{ notifications.next_page }}" class="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition inline-block">
+						تحميل المزيد
+					</a>
+				</div>
+			{% endif %}
+
+		{% else %}
+
+			<!-- No Notifications Placeholder -->
+			<div class="flex flex-col items-center justify-center py-20">
+				<div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+					<i class="sicon-bell text-6xl text-gray-400"></i>
+				</div>
+				<p class="text-lg text-gray-500">ليس لديك إشعارات جديدة.</p>
+			</div>
+
+		{% endif %}
+
+	</div>
+
 	{% hook 'customer:notifications.items.start' %}
-
 	<salla-notifications></salla-notifications>
-
 	{% hook 'customer:notifications.items.end' %}
 {% endblock %}

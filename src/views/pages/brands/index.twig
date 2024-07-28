@@ -8,72 +8,76 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    <div class="container mb-20">
+	<div
+		class="container mx-auto px-6 py-12 mb-20">
 
-        {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
-        <nav class="breadcrumbs w-full py-5">
-            <salla-breadcrumb></salla-breadcrumb>
-        </nav>
+		<!-- Breadcrumbs -->
+		<nav class="breadcrumbs flex items-center space-x-2 text-gray-500 mb-8">
+			<salla-breadcrumb></salla-breadcrumb>
+		</nav>
 
-        <div class="flex justify-between pt-2 pb-6">
-            <h2 class="font-bold mb-6 md:mb-0">{{ page.title }}</h2>
-        </div>
+		<!-- Page Title -->
+		<header class="text-center mb-12">
+			<h1 class="text-4xl font-extrabold text-gray-900">{{ page.title }}</h1>
+		</header>
 
-        {% if brands|length %}
-            <!-- brands nav -->
-            <div class="brands-nav-wrap">
-                <ul id="brands-nav" class="brands-nav">
-                    <li></li>
-                    {% for char,brands_group in brands %}
-                        <li>
-                            <a class="brands-nav__item"
-                               href="#brand-section-{{ loop.index }}"
-                               data-id="{{ loop.index }}">
-                               <span class="fix-align">{{ char }}</span>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- end:: brands nav -->
+		{% if brands|length %}
+			<!-- Alphabetical Navigation -->
+			<nav class="brands-nav-wrap mb-12">
+				<ul id="brands-nav" class="flex justify-center flex-wrap gap-4">
+					{% for char, brands_group in brands %}
+						<li>
+							<a class="brands-nav__item text-lg font-medium text-gray-700 hover:text-primary transition" href="#brand-section-{{ loop.index }}" data-id="{{ loop.index }}">
+								{{ char }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
 
-            <div class="px-8 xl:px-0">
+			<!-- Brands Sections -->
+			<div class="px-8 xl:px-0 space-y-16">
 
-                {% hook 'brands:index.items.start' %}
+				{% hook 'brands:index.items.start' %}
 
-                {% for char,brandGroup in brands %}
-                    <section id="brand-section-{{ loop.index }}" class="pt-24 first:pt-16 md:first:pt-24">
-                        <!-- separator -->
-                        <div class="flex items-center mb-10">
-                            <span data-id="{{ loop.index }}" class="brand-char">
-                              <span class="fix-align">{{ char }}</span>
-                            </span>
-                            <div class="bg-border-color h-px flex-1"></div>
-                        </div>
-                        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 grid-flow-row gap-4 md:gap-8">
-                            {% for brand in brandGroup %}
-                                <a href="{{ brand.url }}" class="brand-item">
-                                    <img class="max-h-full" width="400" height="300" src="{{ brand.logo }}" alt="{{ brand.name }}">
-                                </a>
-                            {% endfor %}
-                        </div>
-                    </section>
-                {% endfor %}
+				{% for char, brandGroup in brands %}
+					<section
+						id="brand-section-{{ loop.index }}" class="brand-section">
+						<!-- Section Header -->
+						<div class="flex items-center mb-6">
+							<h2 class="brand-char text-3xl font-semibold text-gray-800">{{ char }}</h2>
+							<div class="flex-1 bg-gray-200 h-px ml-4"></div>
+						</div>
 
-                {% hook 'brands:index.items.end' %}
+						<!-- Brands Grid -->
+						<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+							{% for brand in brandGroup %}
+								<div class="brand-item group bg-white rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105 overflow-hidden">
+									<a href="{{ brand.url }}" class="block h-full w-full">
+										<img class="w-full h-32 object-contain p-4 transition-opacity duration-300 group-hover:opacity-80" src="{{ brand.logo }}" alt="{{ brand.name }}" loading="lazy">
+									</a>
+								</div>
+							{% endfor %}
+						</div>
+					</section>
+				{% endfor %}
 
-            </div>
-        {% else %}
-            <div class="no-content-placeholder">
-                <span class="rounded-icon !w-36 !h-36 bg-gray-100 mb-6">
-                    <i class="sicon-award-ribbon text-6xl block text-gray-400"></i>
-                </span>
-                <h1 class="font-bold text-sm mb-1">{{ trans('pages.brands.non_brands') }}</h1>
-                <small>{{ trans('pages.brands.try_again') }}</small>
-            </div>
-        {% endif %}
-    </div>
+				{% hook 'brands:index.items.end' %}
+
+			</div>
+		{% else %}
+			<!-- No Brands Placeholder -->
+			<div class="no-content-placeholder text-center py-20">
+				<span class="rounded-icon bg-gray-100 mb-6 inline-flex items-center justify-center w-36 h-36">
+					<i class="sicon-award-ribbon text-6xl text-gray-400"></i>
+				</span>
+				<h1 class="text-2xl font-bold text-gray-700 mb-2">{{ trans('pages.brands.non_brands') }}</h1>
+				<p class="text-gray-500">{{ trans('pages.brands.try_again') }}</p>
+			</div>
+		{% endif %}
+	</div>
 {% endblock %}
+
 {% block scripts %}
-    <script defer src="{{ 'pages.js' | asset }}"></script>
+	 <script defer src="{{ 'pages.js' | asset }}"></script>
 {% endblock %}

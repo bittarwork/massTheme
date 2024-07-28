@@ -7,11 +7,24 @@
 #}
 {% extends "layouts.customer" %}
 {% block inner_content %}
-    {% hook 'customer:profile.form.start' %}
-    <salla-user-profile></salla-user-profile>
-    {% hook 'customer:profile.form.end' %}
+	<div class="container mx-auto px-4 py-8">
 
-    <salla-verify></salla-verify>
+		{% hook 'customer:profile.form.start' %}
 
-    <salla-user-settings {{ user.is_notifiable?'is-notifiable':0 }} class="mt-10 block"></salla-user-settings>
+		<!-- Salla User Profile Component -->
+		<salla-user-profile></salla-user-profile>
+
+		{% hook 'customer:profile.form.end' %}
+
+		<!-- Salla Verify Component -->
+		<div class="mt-10">
+			<salla-verify></salla-verify>
+		</div>
+
+		<!-- Salla User Settings Component -->
+		<div class="mt-10">
+			<salla-user-settings {{ user.is_notifiable ? 'is-notifiable' : '' }} class="block"></salla-user-settings>
+		</div>
+
+	</div>
 {% endblock %}
