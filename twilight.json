@@ -794,7 +794,20 @@
             "title": "اراء العملاء (محسنة)",
             "icon": "sicon-align-center",
             "path": "home.testimonials-enhanced",
-            "fields": []
+            "fields": [
+                {
+                    "id": "sort_alkhlfet",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة الخلفية",
+                    "description": "الصورة الموجودة في الخلفية وعلى اليمين-الاسفل",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": null,
+                    "required": false
+                }
+            ]
         }
     ],
     "support_url": "https://cptart.co",
