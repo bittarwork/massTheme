@@ -788,6 +788,13 @@
                     "value": []
                 }
             ]
+        },
+        {
+            "key": "b09d0da1-b964-4776-bf28-9e00a01b00b8",
+            "title": "اراء العملاء (محسنة)",
+            "icon": "sicon-align-center",
+            "path": "home.testimonials-enhanced",
+            "fields": []
         }
     ],
     "support_url": "https://cptart.co",
