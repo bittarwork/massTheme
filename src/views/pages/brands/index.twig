@@ -9,67 +9,67 @@
 {% extends "layouts.master" %}
 {% block content %}
 	<div
-		class="container my-10">
+		class="container mb-20">
 
-		<!-- Page Header -->
-		<header class="page-header py-5 bg-gray-800 text-white text-center">
-			<h1 class="text-4xl font-bold">{{ page.title }}</h1>
-		</header>
+		{# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
+		<nav class="breadcrumbs w-full py-5">
+			<salla-breadcrumb></salla-breadcrumb>
+		</nav>
+
+		<div class="flex justify-between pt-2 pb-6">
+			<h2 class="font-bold mb-6 md:mb-0">{{ page.title }}</h2>
+		</div>
 
 		{% if brands|length %}
-			<!-- Alphabetical Navigation -->
-			<div class="alphabet-nav fixed top-1/4 left-0 z-50 bg-gray-200 p-4 rounded-r-lg">
-				<ul class="flex flex-col gap-3">
-					{% for char, brands_group in brands %}
+			<!-- brands nav -->
+			<div class="brands-nav-wrap">
+				<ul id="brands-nav" class="brands-nav">
+					<li></li>
+					{% for char,brands_group in brands %}
 						<li>
-							<a class="alphabet-nav__item text-lg font-semibold text-gray-700 hover:text-gray-900" href="#brand-section-{{ loop.index }}" data-id="{{ loop.index }}">
-								{{ char }}
+							<a class="brands-nav__item" href="#brand-section-{{ loop.index }}" data-id="{{ loop.index }}">
+								<span class="fix-align">{{ char }}</span>
 							</a>
 						</li>
 					{% endfor %}
 				</ul>
 			</div>
-			<!-- End Alphabetical Navigation -->
+			<!-- end:: brands nav -->
 
-			<div class="brands-content py-10">
+			<div class="px-8 xl:px-0">
+
 				{% hook 'brands:index.items.start' %}
 
-				{% for char, brandGroup in brands %}
+				{% for char,brandGroup in brands %}
 					<section
-						id="brand-section-{{ loop.index }}" class="brand-section py-16 bg-white mb-8 rounded-lg shadow-lg">
-						<!-- Character Header -->
-						<div class="section-header flex items-center mb-6 px-6">
-							<div class="char-label bg-blue-500 text-white px-4 py-2 rounded-lg">
-								<span class="text-2xl font-bold">{{ char }}</span>
-							</div>
-							<div class="section-divider flex-1 h-1 bg-gray-300 ml-4"></div>
+						id="brand-section-{{ loop.index }}" class="pt-24 first:pt-16 md:first:pt-24">
+						<!-- separator -->
+						<div class="flex items-center mb-10">
+							<span data-id="{{ loop.index }}" class="brand-char">
+								<span class="fix-align">{{ char }}</span>
+							</span>
+							<div class="bg-border-color h-px flex-1"></div>
 						</div>
-						<!-- End Character Header -->
-
-						<!-- Brand Grid -->
-						<div class="brand-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-6">
+						<div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 grid-flow-row gap-4 md:gap-8">
 							{% for brand in brandGroup %}
-								<div class="brand-card bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-									<a href="{{ brand.url }}">
-										<img class="brand-logo w-full h-32 object-contain mb-4" src="{{ brand.logo }}" alt="{{ brand.name }}">
-										<h2 class="brand-name text-center font-semibold text-lg">{{ brand.name }}</h2>
-									</a>
-								</div>
+								<a href="{{ brand.url }}" class="brand-item">
+									<img class="max-h-full" width="400" height="300" src="{{ brand.logo }}" alt="{{ brand.name }}">
+								</a>
 							{% endfor %}
 						</div>
-						<!-- End Brand Grid -->
 					</section>
 				{% endfor %}
 
 				{% hook 'brands:index.items.end' %}
+
 			</div>
 		{% else %}
-			<div class="empty-state text-center py-20">
-				<div class="icon-wrapper bg-gray-200 rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-					<i class="sicon-award-ribbon text-5xl text-gray-500"></i>
-				</div>
-				<h1 class="text-2xl font-bold mb-2">{{ trans('pages.brands.non_brands') }}</h1>
-				<p class="text-gray-600">{{ trans('pages.brands.try_again') }}</p>
+			<div class="no-content-placeholder">
+				<span class="rounded-icon !w-36 !h-36 bg-gray-100 mb-6">
+					<i class="sicon-award-ribbon text-6xl block text-gray-400"></i>
+				</span>
+				<h1 class="font-bold text-sm mb-1">{{ trans('pages.brands.non_brands') }}</h1>
+				<small>{{ trans('pages.brands.try_again') }}</small>
 			</div>
 		{% endif %}
 	</div>
