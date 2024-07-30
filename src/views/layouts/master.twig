@@ -55,7 +55,7 @@
 		<meta charset="UTF-8">
 		<meta
 		http-equiv="X-UA-Compatible" content="IE=edge">
-		 <script type="text/javascript" src="{{ asset ('my-product-card.js') }}"></script>
+		 <script type="text/javascript" src="{{ asset ('js/my-product-card.js') }}"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{{ theme.settings.set('placeholder', 'images/placeholder.png') }}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -188,15 +188,15 @@
 		</style>
 
 		 <script>
-																																																																																																																																																																													window.addEventListener("load", () => {
-																																																																																																																																																																													const loader = document.querySelector(".loader-init");
-																																																																																																																																																																													loader.classList.add("loader-init--hidden");
-																																																																																																																																																																													loader.addEventListener("transitionend", () => {
-																																																																																																																																																																													if (!document.querySelector(".loader-init")) return;
-																																																																																																																																																																													document.body.removeChild(loader);
-																																																																																																																																																																													});
-																																																																																																																																																																													});
-																																																																																																																																																																													</script>
+																																																																																																																																																																															window.addEventListener("load", () => {
+																																																																																																																																																																															const loader = document.querySelector(".loader-init");
+																																																																																																																																																																															loader.classList.add("loader-init--hidden");
+																																																																																																																																																																															loader.addEventListener("transitionend", () => {
+																																																																																																																																																																															if (!document.querySelector(".loader-init")) return;
+																																																																																																																																																																															document.body.removeChild(loader);
+																																																																																																																																																																															});
+																																																																																																																																																																															});
+																																																																																																																																																																															</script>
 
 		 <script defer data-cfasync="false" src="{{ 'product-card.js'|asset }}"></script>
 		 <script defer src="{{ 'main-menu.js'|asset }}"></script>{% block head_scripts %}
@@ -204,9 +204,9 @@
 
 
 		 <script data-cfasync="false">
-																																																																																																																																																																																																																																																																																										        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
-																																																																																																																																																																																																																																																																																										        window.imageZoom = "{{theme.settings.get('imageZoom')}}"
-																																																																																																																																																																																																																																																																																										    </script>
+																																																																																																																																																																																																																																																																																												        window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
+																																																																																																																																																																																																																																																																																												        window.imageZoom = "{{theme.settings.get('imageZoom')}}"
+																																																																																																																																																																																																																																																																																												    </script>
 
 		{% hook 'head:start' %}
 		{% hook head %}{% block styles %}
@@ -252,10 +252,10 @@
 
 </head>
 <body id="app" class=" back overflow-x-hidden font-etab {% hook 'body:classes' %}
-																																																																																																																																																													{{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
-																																																																																																																																																													{{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
-																																																																																																																																																													{{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
-																																																																																																																																																													">
+																																																																																																																																																															{{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
+																																																																																																																																																															{{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
+																																																																																																																																																															{{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
+																																																																																																																																																															">
 	<div class="loader-init"></div>
 	<noscript>
 		To get full functionality of this site you need to enable JavaScript. Here is how
