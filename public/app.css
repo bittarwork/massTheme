@@ -531,17 +531,17 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .mr-10{margin-right:2.5rem}
 .mr-2{margin-right:0.5rem}
 .mr-4{margin-right:1rem}
-.mr-5{margin-right:1.25rem}
 .mt-1{margin-top:0.25rem}
 .mt-10{margin-top:2.5rem}
 .mt-2{margin-top:0.5rem}
 .mt-2\.5{margin-top:0.625rem}
-.mt-20{margin-top:5rem}
 .mt-3{margin-top:0.75rem}
 .mt-4{margin-top:1rem}
 .mt-5{margin-top:1.25rem}
 .mt-6{margin-top:1.5rem}
 .mt-8{margin-top:2rem}
+.mr-5{margin-right:1.25rem}
+.mt-20{margin-top:5rem}
 .line-clamp-1{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}
 .line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
 .line-clamp-3{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}
@@ -721,7 +721,6 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .p-8{padding:2rem}
 .\!py-3{padding-top:0.75rem !important;padding-bottom:0.75rem !important}
 .px-1{padding-left:0.25rem;padding-right:0.25rem}
-.px-10{padding-left:2.5rem;padding-right:2.5rem}
 .px-3{padding-left:0.75rem;padding-right:0.75rem}
 .px-4{padding-left:1rem;padding-right:1rem}
 .px-5{padding-left:1.25rem;padding-right:1.25rem}
@@ -739,6 +738,7 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .py-4{padding-top:1rem;padding-bottom:1rem}
 .py-5{padding-top:1.25rem;padding-bottom:1.25rem}
 .py-8{padding-top:2rem;padding-bottom:2rem}
+.px-10{padding-left:2.5rem;padding-right:2.5rem}
 .pb-1{padding-bottom:0.25rem}
 .pb-10{padding-bottom:2.5rem}
 .pb-16{padding-bottom:4rem}
@@ -772,10 +772,10 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .text-xs{font-size:0.75rem;line-height:1rem}
 .font-bold{font-weight:700}
 .font-extrabold{font-weight:800}
-.font-light{font-weight:300}
 .font-medium{font-weight:500}
 .font-normal{font-weight:400}
 .font-semibold{font-weight:600}
+.font-light{font-weight:300}
 .leading-10{line-height:2.5rem}
 .leading-5{line-height:1.25rem}
 .leading-6{line-height:1.5rem}
@@ -4548,8 +4548,8 @@ salla-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
 .sm\:text-start{text-align:left}
 .sm\:text-2xl{font-size:1.5rem;line-height:2rem}
 .sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}
-.sm\:text-5xl{font-size:3rem;line-height:1}
-.sm\:text-7xl{font-size:4.5rem;line-height:1}}
+.sm\:text-7xl{font-size:4.5rem;line-height:1}
+.sm\:text-5xl{font-size:3rem;line-height:1}}
 @media (min-width: 768px){
 .md\:mb-0{margin-bottom:0px}
 .md\:mb-20{margin-bottom:5rem}
