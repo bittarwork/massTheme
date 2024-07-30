@@ -4613,6 +4613,10 @@ input[type=file] {
 .s-product-card-wishlist-btn.s-product-card-wishlist-added .sicon-heart {
   color: red;
 }
+.s-product-card-entry {
+  flex: 1 1 calc(25% - 1rem);
+  box-sizing: border-box;
+}
 salla-slider .swiper-pagination-bullet {
   width: 30px; /* حجم الأيقونة */
   height: 30px; /* حجم الأيقونة */

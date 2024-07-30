@@ -185,3 +185,7 @@
   .s-product-card-wishlist-btn.s-product-card-wishlist-added .sicon-heart {
     color: red;
   }
+  .s-product-card-entry {
+    flex: 1 1 calc(25% - 1rem);
+    box-sizing: border-box;
+}
