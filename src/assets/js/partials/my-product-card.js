@@ -60,12 +60,12 @@ class CustomProductCard extends HTMLElement {
           text-align: center;
           position: relative;
           transition: background-color 0.5s ease, transform 0.5s ease;
+          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           border-radius: 8px;
           overflow: hidden;
-          height: 100%;
         }
 
         .custom-product-card:hover {
@@ -73,24 +73,62 @@ class CustomProductCard extends HTMLElement {
           transform: translateY(-0.5vh);
         }
 
-        .custom-product-promotion-title {
-          position: absolute;
-          top: 1vh;
-          left: 1vw;
+        .custom-product-card h3 {
+          font-size: 1.2em;
+          font-weight: 100;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: justify-content 0.5s ease;
+          margin: 1vh 0;
+        }
+
+        .custom-product-card h3 a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        .custom-product-card .product-name {
+          display: inline-block;
+          text-decoration: none;
+          color: #000;
+          transition: margin-right 0.5s ease;
+          padding: 0 0.5vw;
+        }
+
+        .custom-product-card .product-price {
+          display: none;
           color: #a5804a;
-          background-color: rgba(255, 255, 255, 0.8);
-          padding: 0.5vh 1vw;
-          border-radius: 4px;
-          display: ${promotionTitleDisplay};
+          transition: display 0.5s ease;
+          margin: 0 0.4vw;
+          font-size: 0.9em;
+        }
+
+        .custom-product-card .separator {
+          width: 0;
+          height: 1px;
+          background-color: #a5804a;
+          transition: width 0.5s ease;
+        }
+
+        .custom-product-card:hover h3 {
+          justify-content: flex-start;
+        }
+
+        .custom-product-card:hover .product-price {
+          display: inline-block;
+        }
+
+        .custom-product-card:hover .separator {
+          width: auto;
+          flex-grow: 1;
         }
 
         .custom-product-card-image {
-          height: 200px;
+          height: auto;
+          max-height: 30vh;
           overflow: hidden;
           border-bottom: 1px solid #eee;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
 
         .custom-product-card-image img {
@@ -109,41 +147,6 @@ class CustomProductCard extends HTMLElement {
           flex-direction: column;
           justify-content: space-between;
           padding: 1vh 0;
-          flex-grow: 1;
-        }
-
-        .custom-product-card-title {
-          font-size: 1.2em;
-          font-weight: 100;
-          margin: 1vh 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .custom-product-card-title a {
-          text-decoration: none;
-          color: #000;
-          transition: margin-right 0.5s ease;
-          padding: 0 0.5vw;
-        }
-
-        .custom-product-card .separator {
-          width: 0;
-          height: 1px;
-          background-color: #a5804a;
-          transition: width 0.5s ease;
-          margin: 0 0.4vw;
-        }
-
-        .custom-product-card:hover .separator {
-          width: auto;
-          flex-grow: 1;
-        }
-
-        .custom-product-card .product-price {
-          color: #a5804a;
-          display: ${productPriceDisplay};
         }
 
         .custom-product-card-description {
@@ -153,7 +156,6 @@ class CustomProductCard extends HTMLElement {
           margin: 1vh 0;
           height: 3em;
           overflow: hidden;
-          display: ${productDescriptionDisplay};
         }
 
         .custom-product-card-add-to-cart-btn {
@@ -177,6 +179,20 @@ class CustomProductCard extends HTMLElement {
           color: #a5804a;
           border: 1px solid #a5804a;
         }
+
+        .custom-product-promotion-title {
+          position: absolute;
+          top: 1vh;
+          left: 1vw;
+          color: #a5804a;
+          margin: 1vw 1vh;
+          font-size: 1em;
+          display: ${promotionTitleDisplay};
+          transition: display 0.5s ease;
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 0.5vh 1vw;
+          border-radius: 4px;
+        }
       </style>
     </head>
     <div class="custom-product-card">
@@ -187,11 +203,11 @@ class CustomProductCard extends HTMLElement {
         </a>
       </div>
       <div class="custom-product-card-content">
-        <div class="custom-product-card-title">
-          <a href="${this.product.url}">${this.product.name}</a>
+        <h3 class="custom-product-card-title">
+          <span class="product-name"><a href="${this.product.url}">${this.product.name}</a></span>
           <div class="separator"></div>
           <span class="product-price">${this.product.price || ''} ر.س</span>
-        </div>
+        </h3>
         <p class="custom-product-card-description">${this.product.description || ''}</p>
         <button class="custom-product-card-add-to-cart-btn" aria-label="Add to wishlist" onclick="salla.wishlist.toggle(${this.product.id})">
           أضف الى السلة

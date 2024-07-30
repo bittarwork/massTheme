@@ -4445,6 +4445,51 @@ input[type=file] {
 .group:hover .custom-mask {
   opacity: 1;
 }
+.social-icons {
+  position: fixed;
+  right: 0;
+  bottom: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  z-index: 10000;
+}
+.social-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5804a;
+}
+.whatsapp {
+  margin-top: 2vh;
+  background-color: #27314b;
+  color: #fff;
+  border-radius: 50%;
+}
+.social-icon:hover {
+  color: #27314b;
+}
+.whatsapp:hover {
+  color: #a5804a;
+}
+.social-icon i {
+  font-size: 18px;
+}
+.line-before-footer {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #27314b;
+  margin: 0 auto; /* لوضع الخط في الوسط إذا لزم الأمر */
+}
+.back {
+  background-color: #f0f0f0;
+}
 .custom-product-card-add-to-cart-btn {
   font-family: "etab" !important;
 }
