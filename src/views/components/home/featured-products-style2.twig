@@ -12,7 +12,7 @@
 			{% for section in items %}
 				<div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }}">
 					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-						<salla-products-list source="offers" <!-- يمكنك تغيير هذا المصدر بناءً على البيانات --> limit="4" <!-- الحد الأقصى لعدد المنتجات التي ستظهر --> horizontal-cards="true" <!-- لعرض البطاقات بشكل أفقي --> product-card-component="custom-product-card" autoload="true"></salla-products-list>
+						<salla-products-list source="offers" product-card-component="custom-product-card" autoload="true"></salla-products-list>
 					</div>
 				</div>
 			{% endfor %}
