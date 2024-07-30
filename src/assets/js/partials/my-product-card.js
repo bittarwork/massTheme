@@ -45,33 +45,36 @@ class CustomProductCard extends HTMLElement {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <style>
         :host {
-          display: inline-block;
-          width: calc(25% - 1rem);
-          box-sizing: border-box;
-          margin: 0.5rem;
-          vertical-align: top;
-        }
+  display: inline-block;
+  width: calc(25% - 1rem);
+  box-sizing: border-box;
+  margin: 0.5rem;
+  vertical-align: top;
+}
 
-        .custom-product-card {
-          background-color: #ffffff;
-          padding: 1vw;
-          color: #000;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          text-align: center;
-          position: relative;
-          transition: background-color 0.5s ease, transform 0.5s ease;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          border-radius: 8px;
-          overflow: hidden;
-        }
+.custom-product-card {
+  background-color: #ffffff;
+  padding: 1vw;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 300px; /* تحديد حد أدنى للارتفاع إذا لزم الأمر */
+}
 
-        .custom-product-card:hover {
-          background-color: #f0f0f0;
-          transform: translateY(-0.5vh);
-        }
+.custom-product-card:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-0.5vh);
+}
+
+/* باقي التنسيقات كما هي */
+
 
         .custom-product-card h3 {
           font-size: 1.2em;
