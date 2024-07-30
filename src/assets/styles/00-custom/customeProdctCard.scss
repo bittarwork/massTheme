@@ -1,0 +1,21 @@
+
+.custom-product-card-add-to-cart-btn {
+    background-color: #a5804a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 1vh 2vw;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    align-self: center;
+    width: auto;
+    font-family:"etab" !important;
+    font-size:1em;
+    display: flex;
+    align-items: center;
+}
+
+.custom-product-card-add-to-cart-btn:hover {
+    background-color: transparent;
+    color: #a5804a;
+}

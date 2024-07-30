@@ -1,0 +1,35 @@
+salla-slider {
+    .swiper-pagination-bullet {
+      width: 30px; /* حجم الأيقونة */
+      height: 30px; /* حجم الأيقونة */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      opacity: 0.3;
+  
+      &::before {
+        content: '\f3a5'; /* رمز الأيقونة من Font Awesome */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 24px; /* حجم الأيقونة */
+        color: #000  ;
+      }
+  
+      &-active {
+        opacity: 1;
+        
+        &::before {
+          color: #000  ;
+        }
+      }
+    }
+  
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      display: flex;
+      justify-content: center;
+      gap: 5vw;
+      bottom: 20px; 
+    }
+  }
+  
