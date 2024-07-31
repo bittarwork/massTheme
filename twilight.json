@@ -7,18 +7,13 @@
     "author_email": "naderst2020@gmail.com",
     "features": [
         "mega-menu",
-        "fonts",
-        "color",
-        "component-featured-products",
         "component-fixed-banner",
         "component-fixed-products",
         "component-products-slider",
         "component-photos-slider",
-        "component-testimonials",
-        "component-store-features",
-        "component-youtube",
         "menu-images",
-        "filters"
+        "filters",
+        "component-featured-products"
     ],
     "settings": [
         {
