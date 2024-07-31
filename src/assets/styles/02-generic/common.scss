@@ -3,15 +3,6 @@ html {
 }
 
 // using salla.document.onClick(...), become effective when all children are none pointer events.
-.cursor-pointer * {
-  pointer-events: none;
-}
-.custom-color {
-  color: #a5804a;
-}
-.flip-x {
-  transform: scaleX(-1);
-}
 
 body {
   @apply bg-gray-50;

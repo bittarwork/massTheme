@@ -1103,14 +1103,14 @@ input[type=radio].sr-only:checked ~ div.s-gifting-step-one .filepond-bg {
   pointer-events: none;
 }
 .s-gifting-remove-preview{pointer-events:none;position:absolute;top:-7px;left:-7px;z-index:10;display:flex;height:1.25rem;width:1.25rem;--tw-scale-x:0;--tw-scale-y:0;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(0) scaleY(0);transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));cursor:pointer;align-items:center;justify-content:center;border-radius:9999px;--tw-bg-opacity:1;background-color:rgba(185, 28, 28, 1);background-color:rgba(185, 28, 28, var(--tw-bg-opacity));text-align:center;font-size:1rem;line-height:1.5rem;--tw-text-opacity:1;color:rgba(255, 255, 255, 1);color:rgba(255, 255, 255, var(--tw-text-opacity));opacity:0;transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:300ms}
-.s-gifting-remove-preview * {
-  pointer-events: none;
-}
 input[type=radio].sr-only div.s-gifting-remove-preview {
   transition: all 0.3s;
 }
 input[type=radio].sr-only:checked ~ div.s-gifting-remove-preview {
   border-color: var(--color-main);
+}
+.s-gifting-remove-preview * {
+  pointer-events: none;
 }
 .s-gifting-remove-preview:where([dir="rtl"], [dir="rtl"] *){left:auto;left:initial;right:-7px}
 .s-gifting-remove-preview svg{height:100%;width:15px;fill:#fff}
@@ -1283,14 +1283,14 @@ input[type=radio].sr-only:checked ~ div.s-loyalty-prize-item-points {
 to{content:var(--tw-content);transform:rotate(360deg)}}
 .s-modal-loader::before{animation:spin 1s linear infinite;border-radius:9999px;border-width:2px;border-style:solid;border-top-color:#a5804a;border-top-color:var(--color-primary);border-left-color:#a5804a;border-left-color:var(--color-primary);border-bottom-color:rgba(243, 244, 246, 1);border-bottom-color:rgba(243, 244, 246, var(--tw-border-opacity));--tw-border-opacity:1;border-right-color:rgba(243, 244, 246, 1);border-right-color:rgba(243, 244, 246, var(--tw-border-opacity));--tw-content:'';content:'';content:var(--tw-content)}
 .s-modal-close svg{position:absolute;right:1rem;top:1rem;z-index:1;height:20px;width:20px;cursor:pointer;border-style:none;background-color:transparent;fill:#f87171;font-size:1.125rem;line-height:1.75rem;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}
-.s-modal-close svg * {
-  pointer-events: none;
-}
 input[type=radio].sr-only div.s-modal-close svg {
   transition: all 0.3s;
 }
 input[type=radio].sr-only:checked ~ div.s-modal-close svg {
   border-color: var(--color-main);
+}
+.s-modal-close svg * {
+  pointer-events: none;
 }
 .s-modal-close svg:hover{fill:#ef4444}
 .s-modal-close svg:where([dir="rtl"], [dir="rtl"] *){right:auto;right:initial;left:1rem}
@@ -1985,15 +1985,6 @@ h5.subtitle {
 }
 html {
   scroll-behavior: smooth;
-}
-.cursor-pointer * {
-  pointer-events: none;
-}
-.custom-color {
-  color: #a5804a;
-}
-.flip-x {
-  transform: scaleX(-1);
 }
 body{--tw-bg-opacity:1;background-color:rgba(249, 250, 251, 1);background-color:rgba(249, 250, 251, var(--tw-bg-opacity))}
 body [type=text]:focus,
@@ -4367,6 +4358,12 @@ lite-youtube.lyt-activated > .lty-playbtn {
   font-size: 5rem;
   margin: 5vh 0;
 }
+.cursor-pointer * {
+  pointer-events: none;
+}
+.custom-color {
+  color: #a5804a;
+}
 .icon {
   fill: white;
   transition: fill 0.3s;
@@ -4845,6 +4842,7 @@ salla-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
 .hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgba(37, 99, 235, 1);background-color:rgba(37, 99, 235, var(--tw-bg-opacity))}
 .hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgba(249, 250, 251, 1);background-color:rgba(249, 250, 251, var(--tw-bg-opacity))}
 .hover\:bg-primary:hover{background-color:#a5804a;background-color:var(--color-primary)}
+.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgba(255, 255, 255, 1);background-color:rgba(255, 255, 255, var(--tw-bg-opacity))}
 .hover\:text-9xl:hover{font-size:8rem;line-height:1}
 .hover\:text-\[\#a5804a\]:hover{--tw-text-opacity:1;color:rgba(165, 128, 74, 1);color:rgba(165, 128, 74, var(--tw-text-opacity))}
 .hover\:text-black:hover{--tw-text-opacity:1;color:rgba(0, 0, 0, 1);color:rgba(0, 0, 0, var(--tw-text-opacity))}
