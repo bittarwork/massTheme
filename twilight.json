@@ -1,9 +1,9 @@
 {
     "name": {
-        "ar": "Theme muznnxcy",
-        "en": "Mas Theme"
+        "ar": "Theme xu6czdkj",
+        "en": "Mas New Theme"
     },
-    "repository": "https://github.com/Conceptartco/masTheme",
+    "repository": "https://github.com/bittarwork/massTheme",
     "author_email": "naderst2020@gmail.com",
     "features": [
         "mega-menu",
@@ -651,7 +651,7 @@
             ]
         }
     ],
-    "support_url": "https://cptart.co",
+    "support_url": "",
     "description": {
         "ar": null,
         "en": null
