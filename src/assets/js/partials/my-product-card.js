@@ -45,11 +45,10 @@ class CustomProductCard extends HTMLElement {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
           :host {
-            display: inline-block;
-            width: calc(25% - 1rem);
+            display: block;
+            width: 100%;
+            max-width: 100%;
             box-sizing: border-box;
-            margin: 0.5rem;
-            vertical-align: top;
           }
 
           .custom-product-card {
@@ -60,7 +59,9 @@ class CustomProductCard extends HTMLElement {
             text-align: center;
             position: relative;
             transition: background-color 0.5s ease, transform 0.5s ease;
-            height: 100%;
+            height: auto;
+            max-width: 100%;
+            margin: 1vh 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -154,8 +155,6 @@ class CustomProductCard extends HTMLElement {
             text-align: right;
             font-weight: 100;
             margin: 1vh 0;
-            height: 3em;
-            overflow: hidden;
           }
           
           .custom-product-card-add-to-cart-btn {
@@ -187,7 +186,7 @@ class CustomProductCard extends HTMLElement {
             color: #a5804a;
             margin: 1vw 1vh;
             font-size: 1em;
-            display: ${promotionTitleDisplay};
+            display: block;
             transition: display 0.5s ease;
             background-color: rgba(255, 255, 255, 0.8);
             padding: 0.5vh 1vw;
