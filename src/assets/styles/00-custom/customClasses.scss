@@ -13,11 +13,6 @@ font-size: 5rem;
 margin: 5vh 0;
 
 }
-
-.custom-color {
-  color: #a5804a;
-}
-
 .icon {
 fill: white;  
 transition: fill 0.3s; 
@@ -26,48 +21,130 @@ transition: fill 0.3s;
 .icon:hover {
 fill: #a5804a    ; 
 }
-
-
-.overlay-larg {
-  margin-right: 5vw;
-  font-size: 7rem;
-  margin-bottom: 5vh;
-}
-.font-slim {
-  font-weight: 100;
-}
-.half-hieght {
-  height: 50vh;
-}
-.more_than_half_hieght {
-  height: 70vh;
-}
-
-.zbyz {
-  background-color:#f0f0f0 ;
-  border: 1px solid #a5804a ; 
-  color: #a5804a;
-  padding: 0vh 1.2vw;
-  border-radius: 0;
   
-}
+  .store-logo {
+    width: 10vw; /* مثال لتكبير العرض */
+    height: auto; /* مثال لتكبير الارتفاع */
+  }
+  
+  .has-placeholder {
+    background-color: #f0f0f0; /* لون الخلفية للعناصر التي لا تحتوي على صورة */
+  }
+  .bg-custom {
+    background-color: #a5804a;
+  }
+  .text-custom {
+    color: #a5804a;
+  }
+  .hover\:bg-white:hover {
+    background-color: #ffffff;
+  }
+  .hover\:text-custom:hover i {
+    color: #a5804a;
+  }
+  .has-placeholder:hover {
+    background-color: #ffffff !important;
+    border-color: #a5804a !important;
+  }
+  .has-placeholder:hover i {
+    color: #a5804a !important;
+  }
+  .hover\:border-custom:hover {
+    border-color: #a5804a !important;
+  }
+  .hover\:shadow-custom:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  }
+  .overlay-larg {
+    margin-right: 5vw;
+    font-size: 7rem;
+    margin-bottom: 5vh;
+  }
+  .font-slim {
+    font-weight: 100;
+  }
+  .half-hieght {
+    height: 50vh;
+  }
+  .more_than_half_hieght {
+    height: 70vh;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .zbyz {
+    background-color:#f0f0f0 ;
+    border: 1px solid #a5804a ; 
+    color: #a5804a;
+    padding: 0vh 1.2vw;
+    border-radius: 0;
+    
+  }
+  
+  .zbyz:hover {
+    background-color: #a5804a    ;
+    color:  #ffffff;
+  }
+  /* custom-styles.css */
+  .custom-mask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .group:hover .custom-mask {
+    opacity: 1;
+  }
+  .social-icons {
+    position: fixed;
+    right: 0;
+    bottom: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    z-index: 10000;
+  }
 
-.zbyz:hover {
-  background-color: #a5804a    ;
-  color:  #ffffff;
-}
+  .social-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a5804a;
+  }
+  .whatsapp {
+    margin-top: 2vh;
+    background-color: #27314b;
+    color: #fff;
+    border-radius: 50%;
+  }
 
+  .social-icon:hover {
+    color: #27314b;
+  }
+  .whatsapp:hover {
+    color: #a5804a;
+  }
 
-
-// 
-.line-before-footer {
-  content: "";
-  display: block;
-  width: 90%;
-  height: 1px;
-  background-color: #27314b;
-  margin: 0 auto; /* لوضع الخط في الوسط إذا لزم الأمر */
-}
-.back {
-  background-color: #f0f0f0;
-}
+  .social-icon i {
+    font-size: 18px;
+  }
+  // 
+  .line-before-footer {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #27314b;
+    margin: 0 auto; /* لوضع الخط في الوسط إذا لزم الأمر */
+  }
+  .back {
+    background-color: #f0f0f0;
+  }
+  
