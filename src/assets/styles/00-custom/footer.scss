@@ -1,0 +1,51 @@
+.store-footer {
+    @apply relative text-white bg-transparent;
+  
+    a {
+      @apply transition-opacity hover:opacity-75;
+    }
+  
+    h3 {
+      @apply text-lg font-bold mb-3 lg:mb-5;
+    }
+    .container {
+      @apply mx-auto;
+    }
+    .span {
+      @apply text-[#a5804a];
+    }
+    .navbar-brand img {
+      @apply w-full h-auto max-w-xs;
+    }
+    p {
+      @apply text-base lg:text-lg;
+    }
+    .custom-color {
+      color: #a5804a;
+      border: 0px solid #000;
+    }
+  
+    .contact-social {
+      @apply mt-5 pt-5 border-t border-white/10;
+  
+      ul {
+        @apply mb-0;
+      }
+    }
+  
+    .footer-is-light & {
+      @apply bg-gray-50 text-gray-700;
+  
+      .store-footer__inner {
+        @apply bg-gray-100 border-b-gray-200;
+      }
+  
+      .social-link {
+        @apply border-gray-300;
+      }
+  
+      .contact-social {
+        @apply border-gray-100;
+      }
+    }
+  }

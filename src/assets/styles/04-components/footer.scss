@@ -1,31 +1,24 @@
-.store-footer {
-  @apply relative text-white bg-transparent;
 
-  a {
+.store-footer {
+  @apply relative bg-darker text-white mt-8 sm:mt-16;
+
+  a{
     @apply transition-opacity hover:opacity-75;
   }
 
-  h3 {
+  &__inner{
+    @apply bg-dark py-8 lg:py-16 border-b border-dashed border-b-white/10;
+  }  
+
+  h3{
     @apply text-lg font-bold mb-3 lg:mb-5;
   }
-  .container {
-    @apply mx-auto;
-  }
-  .span {
-    @apply text-[#a5804a];
-  }
-  .navbar-brand img {
-    @apply w-full h-auto max-w-xs;
-  }
-  p {
-    @apply text-base lg:text-lg;
-  }
-  .custom-color {
-    color: #a5804a;
-    border: 0px solid #000;
+
+  .social-link {
+    @apply border rounded-full w-8 h-8 justify-center flex items-center hover:opacity-75 transition duration-300 text-sm
   }
 
-  .contact-social {
+  .contact-social{
     @apply mt-5 pt-5 border-t border-white/10;
 
     ul {
@@ -44,12 +37,13 @@
       @apply border-gray-300;
     }
 
-    .contact-social {
+    .contact-social{
       @apply border-gray-100;
     }
   }
 }
 
-.copyright-text p {
+
+.copyright-text p{
   @apply text-gray-700;
 }
