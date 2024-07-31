@@ -12,7 +12,7 @@
 			{% for section in items %}
 				<div id="{{ component_id }}-{{ section.id }}" class="{{ loop.first ? 'block' : 'hidden' }}">
 					<div class="flex flex-wrap gap-4">
-						<salla-products-list source="offers" limit="4" horizontal-cards="true" product-card-component="custom-product-card"></salla-products-list>
+						<salla-products-list source="offers" limit="4" horizontal-cards="true"></salla-products-list>
 					</div>
 				</div>
 			{% endfor %}
